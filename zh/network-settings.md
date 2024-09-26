@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 实用网络设置集合
 ---------------------------------------------

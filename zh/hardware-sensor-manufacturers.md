@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Contents](../README.md)
+[Table of Contents](../README.zh.md)
 
 Hardware: Image Sensors Manufacturers
 -------------------------------------

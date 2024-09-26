@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 ## 故障排除：Majestic 无法工作，相机重新启动
 

@@ -1,4 +1,4 @@
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 使用 SD 卡解开 Ingenic T31 
 ---

@@ -1,5 +1,5 @@
 # OpenIPC Wiki 
-[内容](../README.md)
+[内容](../README.zh.md)
 
 关于watchdog和rtc的讨论
 ------------------------------------------------

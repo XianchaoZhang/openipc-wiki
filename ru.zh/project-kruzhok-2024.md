@@ -1,5 +1,5 @@
 # OpenIPC Wiki 
-[内容](../README.md)
+[内容](../README.zh.md)
 
 Qtech QVC-IPC-136W & 开关摄像机 HS-303-V3 
 ------------------------------------- ---

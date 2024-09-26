@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 ## 每个 SoC 支持的传感器
 

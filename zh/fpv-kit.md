@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 选择硬件来完成 OpenIPC FPV 套件 
 -----------------------------------------------

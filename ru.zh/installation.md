@@ -1,5 +1,5 @@
 # OpenIPC Wiki 
-[内容](../README.md)
+[内容](../README.zh.md)
 
 安装 OpenIPC。步步。 
 --------------------------------

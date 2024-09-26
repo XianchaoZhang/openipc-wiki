@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 ## 故障排除：网络在 hi35xx 上不工作 
 如果在安装 OpenIPC（无链接）后网络在您的 hi35xx 设备上不工作，则可能必须调整 MII（媒体独立接口）设置。对于 U-Boot，这可以通过设置"phyaddru"、"phyaddrd"和"mdio_intf"的值来完成。"phyaddru"和"phyaddrd"的可能值为："0-3"，"mdio_intf"的可能值为："rmii"、"rgmii"、"gmii"。对于 Linux 内核/操作系统，可以通过"extras"引导变量"hieth.phyaddru"、"hieth.phyaddrd"、"hieth.mdioifu"和"hieth.mdioifd"设置值。

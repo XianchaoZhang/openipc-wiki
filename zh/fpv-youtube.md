@@ -1,4 +1,4 @@
-# OpenIPC Wiki [目录](../README.md)
+# OpenIPC Wiki [目录](../README.zh.md)
 
 YouTube 上的精选 OpenIPC 视频 
 ----------------------------------------

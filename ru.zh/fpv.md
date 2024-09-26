@@ -1,5 +1,5 @@
 # OpenIPC Wiki 
-[内容](../README.md)
+[内容](../README.zh.md)
 
 使用 OpenIPC 作为 FPV 系统的预算视频链路
 --------------------------------

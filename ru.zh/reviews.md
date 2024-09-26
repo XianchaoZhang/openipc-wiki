@@ -1,5 +1,5 @@
 # OpenIPC Wiki 
-[内容](../README.md)
+[内容](../README.zh.md)
 
 显示处理器和传感器的相机评论
 ----------------

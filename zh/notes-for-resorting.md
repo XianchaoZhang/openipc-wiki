@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 安装：如何让OpenIPC在某些硬件上运行
 ------------------------------------------------------------

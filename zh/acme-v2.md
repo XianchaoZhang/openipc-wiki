@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 如何在相机上安装 HTTPS 证书 
 ------------------------------------------------

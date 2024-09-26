@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 仅适用于带有 SSC335 Soc 的 Anjoy/Brovotech/Gospell/Uniview 板!!! 
 ------------------------------------------------------------------

@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of contents](../README.md)
+[Table of contents](../README.zh.md)
 
 
 如何使用 RTL8812EU 驱动程序构建 OpenIPC 

@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 在 Docker 中运行 TFTP 服务器 
 -------------------------------

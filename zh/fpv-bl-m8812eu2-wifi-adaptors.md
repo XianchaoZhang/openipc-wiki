@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 在 FPV 固件中使用 BL-M8812EU2（或其他基于 RTL8812EU）Wi-Fi 模块的说明 
 --- 

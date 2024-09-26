@@ -1,4 +1,4 @@
-# OpenIPC Wiki [内容](../README.md)
+# OpenIPC Wiki [内容](../README.zh.md)
 
 固件 gk7205v300 + IMX335 + XM_XT25F128B 
 --------------------------------------------------------

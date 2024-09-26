@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of contents](../README.md)
+[Table of contents](../README.zh.md)
 
 开发 38x38 FPV系统扩展板
 --------------------------------

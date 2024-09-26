@@ -1,6 +1,6 @@
 # OpenIPC 维基
 
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 ## OrangePi 5 Ubuntu 22.04 地面站快速设置
 

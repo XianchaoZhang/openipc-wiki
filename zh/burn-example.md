@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 使用 Burn 安装 OpenIPC 的注意事项 
 --------------------------------------

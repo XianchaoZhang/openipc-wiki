@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 SigmaStar SoC研究和调试笔记 
 ------------------------------------------

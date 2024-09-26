@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 使用 OpenIPC 作为 FPV 系统的预算视频链接 
 ---------------------------------------------------

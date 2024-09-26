@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 
 在 SigmaStar 设备上安装 OpenIPC 固件的说明 

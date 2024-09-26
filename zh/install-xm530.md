@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 仅适用于带有 XM530/XM550 SoC 的 XM 供应商主板!!! 
 --------------------------------------------------

@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 在 Ubuntu 22.04 上运行 GroundStation 的分步命令 
 ---------------------------------------------------------

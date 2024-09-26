@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.md)
+[Table of Content](../README.zh.md)
 
 为 Ingenic T31 添加 Huge-IC AH WiFi HaLow 驱动程序 
 ---------------------------------------------------- 
