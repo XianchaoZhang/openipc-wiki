@@ -6,7 +6,7 @@
 
 ### 我的相机不在受支持的设备列表中。你们能帮我解决吗？
 
-简短的回答是“不”。
+简短的回答是"不"。
 
 如果您有技能并且希望让 OpenIPC 在新硬件上运行，我们可以分享我们的知识。如果没有，请购买一台受支持的相机。
 
@@ -90,7 +90,7 @@ sf probe 0; sf erase 0xd50000 0x2b0000; reset
 
 ### 如何查找相机硬件和软件的信息？
 
-通过“ssh”登录相机并运行“ipctool”。
+通过"ssh"登录相机并运行"ipctool"。
 
 ### 我在摄像头上看不到 ipctool。为什么？
 
@@ -98,9 +98,9 @@ sf probe 0; sf erase 0xd50000 0x2b0000; reset
 
 _（由于它是一个 shell 命令，因此它无法从 Web UI 中的 Web 控制台运行。通过 SSH 登录到摄像头并在其中运行该命令。）_
 
-运行此命令时，最新版本的“ipctool”实用程序将下载到“/tmp/”目录中并从那里运行。由于该实用程序位于“/tmp/”，因此重启后它将失效，因此之后不会占用相机上的任何有用空间。
+运行此命令时，最新版本的"ipctool"实用程序将下载到"/tmp/"目录中并从那里运行。由于该实用程序位于"/tmp/"，因此重启后它将失效，因此之后不会占用相机上的任何有用空间。
 
-如果您需要知道命令中的内容，请在“/etc/profile”文件中搜索“ipctool”。
+如果您需要知道命令中的内容，请在"/etc/profile"文件中搜索"ipctool"。
 
 ### 从 Linux 替换引导加载程序
 
@@ -135,7 +135,7 @@ curl -L -o /tmp/ipcinfo https://github.com/OpenIPC/ipctool/releases/download/lat
 curl -s https://raw.githubusercontent.com/OpenIPC/firmware/master/general/overlay/usr/sbin/sysupgrade | sh -s -- -k -r -n
 ```
 
-### 是否可以通过“无线”方式从“精简版”切换到“终极版”？
+### 是否可以通过"无线"方式从"精简版"切换到"终极版"？
 
 在 Ingenic 和 Sigmastar 上，可以分割最终的 rootfs.squashfs 并将其刷入 rootfs（mtd3）和覆盖（mtd4）分区。
 
@@ -204,7 +204,7 @@ ssh root@192.168.1.66
 
 您需要指定 GPIO 引脚来控制红外滤光片。某些相机的设置可在 [本表][1] 中找到。如果您的相机不在表中，则需要使用 [ipctool 实用程序][2]。
 
-第一次调用“ipctool”时，OpenIPC 固件将自动将最新版本的实用程序下载到 /tmp 目录。
+第一次调用"ipctool"时，OpenIPC 固件将自动将最新版本的实用程序下载到 /tmp 目录。
 
 在库存固件中，您需要使用系统中可用的任何工具自行将实用程序下载到相机：wget、curl、tftp 等。
 
@@ -224,7 +224,7 @@ mount -o nolock 95.217.179.189:/srv/ro /tmp/utils/
 /tmp/utils/ipctool
 ```
 
-将实用程序下载到相机后，在终端中运行“ipctool gpio scan”命令，并用手掌打开和关闭相机镜头几次。
+将实用程序下载到相机后，在终端中运行"ipctool gpio scan"命令，并用手掌打开和关闭相机镜头几次。
 
 观察 ipctool 的输出以确定负责控制红外滤光帘的引脚。
 

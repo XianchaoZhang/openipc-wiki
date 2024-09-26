@@ -41,13 +41,13 @@ Introduction
 
 Majestic 是一款视频流应用程序，是我们固件的核心（与摄像头/视频监控功能相关）。它可通过文件 `/etc/majestic.yaml` 进行配置，默认情况下启用了许多功能/服务。可以关闭不需要的选项以获得更好的安全性和性能。
 
-要在调试模式下运行“majestic”：
+要在调试模式下运行"majestic"：
 
 ```bash
 killall -sigint majestic; export SENSOR=$(ipctool --sensor_id); majestic
 ```
 
-要在生产模式下运行“majestic”，请重新启动相机或运行命令：
+要在生产模式下运行"majestic"，请重新启动相机或运行命令：
 
 ```bash
 killall -sigint majestic; export SENSOR=$(ipctool --sensor_id); majestic 2>&1 | logger -p daemon.info -t majestic &
@@ -242,7 +242,7 @@ loadaddr-$(CONFIG_TARGET_hi35xx_20dv200) := 0x80008000
 
 **注意力！**
 
-所有示例均表示通过 TFTP 服务器下载固件组件。如果您的设备没有以太网端口，请将所有“tftp”命令替换为“fatload mmc 0:1”。例如：
+所有示例均表示通过 TFTP 服务器下载固件组件。如果您的设备没有以太网端口，请将所有"tftp"命令替换为"fatload mmc 0:1"。例如：
 
 ```txt
 tftp 0x82000000 openwrt-hi35xx-XXXXX-u-boot.bin

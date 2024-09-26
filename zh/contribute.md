@@ -1,7 +1,7 @@
 # OpenIPC Wiki
 [Table of Content](../README.md)
 
-> “每次修补一个补丁，改善世界。”
+> "每次修补一个补丁，改善世界。"
 
 指南
 ---

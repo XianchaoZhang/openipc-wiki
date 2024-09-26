@@ -26,7 +26,7 @@ python burn --chip hi3516ev200 --file=u-boot/gk7205v200.bin -p COM4 --break && p
 ```
 
 - 用电源打开相机，等待 putty 退出控制台
-- 按 Enter，然后您将在控制台中看到“goke”
+- 按 Enter，然后您将在控制台中看到"goke"
 - 运行 TFTP 服务器，指定 bin 文件的路径
 - 现在按照 OpenIPC 站点生成的说明进行操作：
 

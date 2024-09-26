@@ -30,7 +30,7 @@ fw_setenv wlanpass "password"
 reboot
 ```
 
-这将启动 USB WiFi 模块（GPO #54），并加载适当的内核驱动程序（“8188fu”）。
+这将启动 USB WiFi 模块（GPO #54），并加载适当的内核驱动程序（"8188fu"）。
 
 ## LEDs
 

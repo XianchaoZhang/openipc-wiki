@@ -45,7 +45,7 @@ sudo apt install minicom
 sudo usermod -a -G dialout USERNAME
 ```
 
-要使用电源重新启动设备，请按“Ctrl+A H”。不关闭电源即可退出`Ctrl+A Q`。
+要使用电源重新启动设备，请按"Ctrl+A H"。不关闭电源即可退出`Ctrl+A Q`。
 
 将适配器连接至 USB 端口时，电源将关闭。要启用它，您可以运行以下程序：
 

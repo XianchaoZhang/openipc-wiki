@@ -37,7 +37,7 @@ ssh root@192.168.1.66
 #### 相机图像呈粉红色。
 您需要指定 GPIO 引脚来控制红外滤光片。某些相机的设置可以在[表中](https://openipc.org/wiki/en/gpio-settings.html)找到。如果您的相机不在表中，那么您将需要 [ipctool](https://github.com/OpenIPC/ipctool/releases/download/latest/ipctool) 实用程序。
 
-当您第一次调用“ipctool”时，OpenIPC 固件会自动将最新版本的实用程序下载到 /tmp 目录。在本机固件上，您需要使用系统中提供的工具自行将该实用程序下载到相机：wget、curl、tftp...例如，将 ipctool 实用程序下载到本地网络上的 TFTP 服务器，然后下载从那里到相机：
+当您第一次调用"ipctool"时，OpenIPC 固件会自动将最新版本的实用程序下载到 /tmp 目录。在本机固件上，您需要使用系统中提供的工具自行将该实用程序下载到相机：wget、curl、tftp...例如，将 ipctool 实用程序下载到本地网络上的 TFTP 服务器，然后下载从那里到相机：
 
 ```
 tftp -g -r ipctool -l /tmp/ipctool 192.168.1.1
@@ -50,7 +50,7 @@ mkdir -p /tmp/utils
 mount -o nolock 95.217.179.189:/srv/ro /tmp/utils/
 /tmp/utils/ipctool
 ```
-将该实用程序下载到相机后，运行命令在终端中输入“ipctool gpio scan”，然后用手掌关闭和打开相机镜头几次。观察 ipctool 输出以确定负责控制 IR 滤光幕的引脚。将结果值输入 Majestic 夜间模式设置中。如果粉红色调没有消失，您可能需要启用传感器信号反转。
+将该实用程序下载到相机后，运行命令在终端中输入"ipctool gpio scan"，然后用手掌关闭和打开相机镜头几次。观察 ipctool 输出以确定负责控制 IR 滤光幕的引脚。将结果值输入 Majestic 夜间模式设置中。如果粉红色调没有消失，您可能需要启用传感器信号反转。
 
 不要忘记将相机型号和找到的 GPIO 值添加到表中！
 
@@ -75,7 +75,7 @@ scp -O ~/myfile root@192.168.1.65:/tmp/
 
 ### 如何更改相机上的MAC地址？
 
-通过 SSH 或 UART 登录并执行命令``fw_setenv ethaddr AA:BB:CC:DD:EE:FF```，其中第三个参数对应所需的正确参数，即一个“有效”的 MAC 地址（最好是原厂地址），这一点非常重要！
+通过 SSH 或 UART 登录并执行命令``fw_setenv ethaddr AA:BB:CC:DD:EE:FF```，其中第三个参数对应所需的正确参数，即一个"有效"的 MAC 地址（最好是原厂地址），这一点非常重要！
 
 当您首次通过摄像机的 85 端口登录 WEB 时，系统会要求您自动更改 MAC，您可以指定自己的 MAC，也可以根据所有规则自动生成 MAC。
 
@@ -111,7 +111,7 @@ pip install -r requirements.txt
 
 这有点复杂，但也是可能的。  首先，您需要安装适用于 Windows 的 Linux 子系统 (WSL)，例如，您可以在此处阅读如何执行此操作：https://docs.microsoft.com/ru-ru/windows/wsl/install。
 
-然而，这还不够：您需要设置环境变量，否则脚本将失败并出现错误。  抱怨“$​​PATH”环境变量中存在无效字符。  原因很简单：Windows 推出自己的路径：
+然而，这还不够：您需要设置环境变量，否则脚本将失败并出现错误。  抱怨"$​​PATH"环境变量中存在无效字符。  原因很简单：Windows 推出自己的路径：
 
 ```diff
 $ echo $PATH
@@ -182,7 +182,7 @@ setenv phyaddru 0
 setenv phyaddrd 1
 saveenv; reset
 ```
-以上是最常用的 MII 设置，但它们可能有所不同。 `mdio_intf` 的可能值：`rmii`、`rgmii`、`gmii`。获取这些值和地址的最简单方法是通过“ipctool”从库存固件中获取。如果它们没有保存，那么您只需检查所有组合即可。地址可以从“0”到“3”变化。
+以上是最常用的 MII 设置，但它们可能有所不同。 `mdio_intf` 的可能值：`rmii`、`rgmii`、`gmii`。获取这些值和地址的最简单方法是通过"ipctool"从库存固件中获取。如果它们没有保存，那么您只需检查所有组合即可。地址可以从"0"到"3"变化。
 
 您可以在uboot中检查网络功能，如下所示：
 ```
@@ -201,7 +201,7 @@ eth0 在 uboot for Linux 中设置 MII 后，您还需要配置：
 fw_setenv extras hieth.phyaddru=0 hieth.phyaddrd=1
 ```
 
-在`中保存相机的正确值后extras`变量，您必须重新启动相机，之后界面应该出现。您可以使用“ifconfig”或“ip addr”命令进行检查。
+在`中保存相机的正确值后extras`变量，您必须重新启动相机，之后界面应该出现。您可以使用"ifconfig"或"ip addr"命令进行检查。
 
 #### 更换闪存驱动器后，u-boot 停止加载，只写入一两行，
 我刷新了闪存驱动器并将其更换到相机上，而不是损坏的闪存驱动器。我没有加载，而是在 UART 中仅收到以下几行。可以看到，有尝试加载U-Boot，但在某个阶段相机冻结了。

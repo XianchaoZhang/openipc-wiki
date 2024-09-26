@@ -51,7 +51,7 @@ sudo ./dkms-install.sh
 
 ### 安装 WFB-NG
 
-使用“nmcli”命令，我们找出你的 wifi 适配器的名称，并用 $WLAN 代替
+使用"nmcli"命令，我们找出你的 wifi 适配器的名称，并用 $WLAN 代替
 
 ```
 git clone -b stable https://github.com/svpcom/wfb-ng.git

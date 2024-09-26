@@ -24,7 +24,7 @@ Majestic中出现了很多功能之后，也由于不同处理器上发射能力
 
 存储库：https://github.com/openipc/fancyweb
 
-我们还有一个华丽的界面，但没有实现，只是因为当时它有点“胖”，而且流媒体中缺乏 API 功能。用 ReactJS 编写。
+我们还有一个华丽的界面，但没有实现，只是因为当时它有点"胖"，而且流媒体中缺乏 API 功能。用 ReactJS 编写。
 
 有一个出色的演示文稿可以让您熟悉各种可能性：https://github.com/OpenIPC/fancyweb/blob/master/presentation/OpenIPC_fancyweb_interface_rus.pdf
 

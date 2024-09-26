@@ -52,7 +52,7 @@ pqtools:Waiting for connection from client!
 
 下载 [PQTools][pqt] 并将 zip 文件解压到电脑的某处。
 
-启动“HiPQTools.exe”，选择“Hi3516EV200_V1.0.1.2”，输入相机的 IP 地址，然后单击“OK”。
+启动"HiPQTools.exe"，选择"Hi3516EV200_V1.0.1.2"，输入相机的 IP 地址，然后单击"OK"。
 
 使用[本手册][man]作为参考。
 

@@ -35,7 +35,7 @@ run uk; run ur; reset
 
 ### 注释
 
-完成新固件刷新后，请运行“firstboot”命令来格式化用于存储设置的 jffs2 分区。
+完成新固件刷新后，请运行"firstboot"命令来格式化用于存储设置的 jffs2 分区。
 
 ### 已知问题
 

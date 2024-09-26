@@ -132,7 +132,7 @@ OpenIPC 已将 prometheus node exporter 作为软件包。可以在 http://192.1
 
 [[images/preometheus_node_graphana_example.jpg]]
 
-您可以在“/etc/config/prometheus-node-exporter-lua”中配置节点。
+您可以在"/etc/config/prometheus-node-exporter-lua"中配置节点。
 
 ### 元包
 
@@ -244,19 +244,19 @@ Welcome to HiLinux.
 
 * 使用[链接](https://translate.google.com/translate?hl=en&sl=ru&tl=en&u=https%3A%2F%2Fwww.cctvsp.ru%2Farticles%2Fobnovlenie-proshivok-dlya-ip-kamer-ot-xiong-mai) 找到包含最新固件更新的正确 zip 文件并下载。
 
-* 解压缩并从几个选项中选择适当的“bin”文件。
+* 解压缩并从几个选项中选择适当的"bin"文件。
 
-* 建议使用此库存固件更新您的相机，不要对其进行修改。这将有助于了解可能出现的问题。如果不确定要使用哪个选项，请使用“常规...”。
+* 建议使用此库存固件更新您的相机，不要对其进行修改。这将有助于了解可能出现的问题。如果不确定要使用哪个选项，请使用"常规..."。
 
-* 解压“bin”文件，就像解压普通的 zip 档案一样。
+* 解压"bin"文件，就像解压普通的 zip 档案一样。
 
-* 从存储库的“utils”目录复制“add_xmuart.sh”到解压文件的目录中。
+* 从存储库的"utils"目录复制"add_xmuart.sh"到解压文件的目录中。
 
 * 运行`./add_xmaurt.sh`，然后确保`u-boot.env.img`在文件末尾附近有`xmuart=1telnetctrl=1`。
 
 * 重新打包 `bin` 文件并添加修改后的 `u-boot.env.img`，如下所示：`zip -u General_IPC_HI3516EV200_85H30AI_S38.Nat.dss.OnvifS.HIK_V5.00.R02.20200507_all.bin u-boot.env.img`
 
-* 使用新的“bin”文件升级相机。
+* 使用新的"bin"文件升级相机。
 
 文档来源为[这里]（https://github.com/OpenIPC/camerasrnd/blob/master/get_telnet.md）
 
@@ -335,13 +335,13 @@ YouTube 不仅提供 LiveStreaming，还可以录制此流。
 
 导航到已编译的包 [H264 over RTMP](https://github.com/ZigFisher/Glutinium/tree/master/hi35xx-ffmpeg/files)
 
-将文件“silence.aac”复制到“/usr/lib/”，将文件“ffmpeg”复制到“/usr/sbin/”
+将文件"silence.aac"复制到"/usr/lib/"，将文件"ffmpeg"复制到"/usr/sbin/"
 
 同时设置执行权限：
 
 `chmod +x /usr/sbin/ffmpeg`
 
-使用以下参数运行“ffmpeg”：
+使用以下参数运行"ffmpeg"：
 
 `ffmpeg -stream_loop -1 -i /usr/lib/silence.aac -rtsp_transport udp -thread_queue_size 64 -i rtsp://127.0.0.1:554/stream=0 -c:v copy -c:a copy -f flv rtmp://a.rtmp.youtube.com/live2/<你的密钥>`
 

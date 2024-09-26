@@ -52,7 +52,7 @@ uacme -y -v -h /usr/share/uacme/uacme.sh -t EC issue ipc-001.mysuperduperdomain.
 
 ### 设置本地 DNS 记录覆盖
 
-您可以在计算机上的“/etc/hosts”文件中添加覆盖记录
+您可以在计算机上的"/etc/hosts"文件中添加覆盖记录
 
 ```bash
 echo "192.168.1.10  ipc-001.mysuperduperdomain.com" >> /etc/hosts

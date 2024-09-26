@@ -71,7 +71,7 @@
 
 - [REST API 教程](https://restfulapi.net/)
 - [视频编解码器指南](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs)
-- [常见媒体类型中的“codecs”参数](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter)
+- [常见媒体类型中的"codecs"参数](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter)
 - [使用 GStreamer 进行视频编码和播放 (Linux)](https://developer.toradex.com/knowledge-base/video-playback-linux)
 - [雄迈开放平台](https://oppf.xmcsrv.com/)
 

@@ -20,7 +20,7 @@
 在开始构建自己的固件之前，必须对系统进行一些更改并了解一般过程。
 
 ### 克隆 OpenIPC 固件 Git 存储库 
-第一步是制作 OpenIPC 固件源代码的本地副本。我们在下面的脚本中使用“mylocalOpenIPC/src”，但您可以将其更改为您喜欢的任何位置，例如 ~/myprojects/myOpenIPC
+第一步是制作 OpenIPC 固件源代码的本地副本。我们在下面的脚本中使用"mylocalOpenIPC/src"，但您可以将其更改为您喜欢的任何位置，例如 ~/myprojects/myOpenIPC
 
 ```cd
 mkdir -p mylocalOpenIPC/src
@@ -84,7 +84,7 @@ make
 
 选择所需目标并按回车键。构建将开始。
 
-_如果您收到错误“tar：这看起来不像 tar 存档”，请参阅本节底部的注释_
+_如果您收到错误"tar：这看起来不像 tar 存档"，请参阅本节底部的注释_
 
 构建固件二进制文件的过程需要 15-20 分钟到几个小时，具体取决于您的计算机性能和所选目标。如果您想加快此过程，请确保使用带有 SSD 而不是 HDD 的计算机，因为编译过程涉及大量读写。更快的 CPU 也有好处，而且 RAM 也不嫌多。您甚至可以花几美分租用在线虚拟服务器，利用云计算的力量编译固件。
 
@@ -103,7 +103,7 @@ total 39352
 ```
 
 
-** **注意：“tar：这看起来不像 tar 存档”错误** \ 如果您使用的是 Ubuntu，则在 make 脚本中使用 wget 时可能会遇到问题，导致构建失败，并向控制台报告消息“tar：这看起来不像 tar 存档”。这是因为脚本中使用的 wget 命令无法正确验证，因此结果是一个空文件。
+** **注意："tar：这看起来不像 tar 存档"错误** \ 如果您使用的是 Ubuntu，则在 make 脚本中使用 wget 时可能会遇到问题，导致构建失败，并向控制台报告消息"tar：这看起来不像 tar 存档"。这是因为脚本中使用的 wget 命令无法正确验证，因此结果是一个空文件。
 
 The workaround for this is to ensure the Makefile in the firmware directory is updated with the addition of  '--ca-directory=/etc/ssl/certs' so the prepare section will now read  
 ```
@@ -118,7 +118,7 @@ export WGET := wget --ca-directory=/etc/ssl/certs --show-progress --passive-ftp 
 ```
 
 
-解决方法是确保固件目录中的 Makefile 已更新，并添加了“--ca-directory=/etc/ssl/certs”，因此现在将读取准备部分，并且 general/external.mk 文件也已更新为包含：
+解决方法是确保固件目录中的 Makefile 已更新，并添加了"--ca-directory=/etc/ssl/certs"，因此现在将读取准备部分，并且 general/external.mk 文件也已更新为包含：
 ## 安装固件
 
 构建固件后，您需要将其安装到相机上。
@@ -149,19 +149,19 @@ OpenIPC 固件 v2 使用 [Buildroot][1] 来构建其固件二进制文件。因�
 
 请注意，OpenIPC 使用的是 Buildroot 的一个略微过时的版本。截至今天，它是 Buildroot 2024.02.1，因此您可能需要查看该特定版本的文档，因为后续版本可能有不兼容的更改。
 
-OpenIPC 固件源由 IP 摄像机 SoC 供应商在目录中组织为 Buildroot 外部树，即“br-ext-chip-<供应商名称>”。
+OpenIPC 固件源由 IP 摄像机 SoC 供应商在目录中组织为 Buildroot 外部树，即"br-ext-chip-<供应商名称>"。
 
 ![image](https://github.com/user-attachments/assets/bd060676-7008-41ae-9ec6-f0ed18f6f48e)
 
-每个目录都有多个子目录：“board/”、“configs/”、“linux/”和“packages/”，以及一些配置文件，所有这些都与特定供应商的带有芯片的不同主板相关。
+每个目录都有多个子目录："board/"、"configs/"、"linux/"和"packages/"，以及一些配置文件，所有这些都与特定供应商的带有芯片的不同主板相关。
 
-“board/” 目录包含按处理器组（称为系列）命名的子目录。每个系列目录中都包含该系列中各个处理器的内核配置文件、通用补丁和其他系列特定文件。
+"board/" 目录包含按处理器组（称为系列）命名的子目录。每个系列目录中都包含该系列中各个处理器的内核配置文件、通用补丁和其他系列特定文件。
 
-“configs/” 目录包含来自给定供应商的处理器的各种主板的默认配置文件 (defconfig)。这些配置文件还可能因硬件设置、所含软件包集、不同的默认设置、品牌等而不同。每个 defconfig 文件都是一个单独的软件包，从而产生一个单独的固件二进制文件。
+"configs/" 目录包含来自给定供应商的处理器的各种主板的默认配置文件 (defconfig)。这些配置文件还可能因硬件设置、所含软件包集、不同的默认设置、品牌等而不同。每个 defconfig 文件都是一个单独的软件包，从而产生一个单独的固件二进制文件。
 
-“linux/”目录包含用于修补内核的配置文件，以使其与供应商提供的二进制 blob（如果有）一起工作。
+"linux/"目录包含用于修补内核的配置文件，以使其与供应商提供的二进制 blob（如果有）一起工作。
 
-“package/” 目录包含用于构建结果固件的包的符号链接。
+"package/" 目录包含用于构建结果固件的包的符号链接。
 
 `Config.in` 是一个配置文件，整合了所有提供的包的配置文件。
 
@@ -185,7 +185,7 @@ make br-<package>-rebuild
 
 > 虽然 `br-<package>-rebuild` 意味着 `br-<package>-reinstall`，而 `br-<package>-reconfigure` 意味着 `br-<package>-rebuild`，但这些目标以及 `<package>` 仅对所述包起作用，并且不会触发重新创建根文件系统映像。如果需要重新创建根文件系统，还应运行 `make br-all`。
 
-运行“make br-linux-rebuild br-all”重建 Linux 内核映像，运行“make br-busybox-rebuild br-all”重建 busybox 并将其打包成 rootfs 映像。
+运行"make br-linux-rebuild br-all"重建 Linux 内核映像，运行"make br-busybox-rebuild br-all"重建 busybox 并将其打包成 rootfs 映像。
 
 记住！上面两个命令中的包名是你的包的文件夹名，而不是你在Config.in文件中设置的包名
 
@@ -202,11 +202,11 @@ make br-<package>-rebuild
 
 有时您需要向固件添加驱动程序或软件包。如何使用提供的 OpenIPC 固件源来实现这一点？这真的很容易。在本地克隆固件存储库并为您的特定硬件编译二进制文件。
 
-编译过程很大程度上取决于您的计算机性能。您获得的 CPU 线程和内存越多，编译过程就越快。无论如何，您可以预期初始编译将持续大约半小时，或多或少。生成的二进制文件将驻留在“output/images”目录中。如果您没有对源进行任何更改，那么这些文件应该与 [可从 GitHub 获得的文件] [4] 相同。
+编译过程很大程度上取决于您的计算机性能。您获得的 CPU 线程和内存越多，编译过程就越快。无论如何，您可以预期初始编译将持续大约半小时，或多或少。生成的二进制文件将驻留在"output/images"目录中。如果您没有对源进行任何更改，那么这些文件应该与 [可从 GitHub 获得的文件] [4] 相同。
 
-编译过程还构建了一个适用于编译您固件版本的软件包的工具链。该工具链位于“output/host”目录中。
+编译过程还构建了一个适用于编译您固件版本的软件包的工具链。该工具链位于"output/host"目录中。
 
-要自定义固件、添加或删除软件包，请运行“make br-menuconfig”。这将加载 buildroot 配置菜单，您可以按照 [Buildroot 用户手册][5] 进行更改。进行更改并在退出时保存修改后的配置。然后运行“make clean all”。
+要自定义固件、添加或删除软件包，请运行"make br-menuconfig"。这将加载 buildroot 配置菜单，您可以按照 [Buildroot 用户手册][5] 进行更改。进行更改并在退出时保存修改后的配置。然后运行"make clean all"。
 
 __请注意，直接使用 buildroot 构建固件不会重命名生成的映像文件并为其添加 soc 后缀。您可以自行操作，也可以调整固件并相应地更新命令。__
 

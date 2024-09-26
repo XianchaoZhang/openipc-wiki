@@ -49,5 +49,5 @@ make
 - ```/etc/wfb.conf``` 中的 ```driver_txpower_override```。范围是 ```0~63```
 - ```iw dev <wlan0> set txpower fixed <mBm>```。范围是 ```0~3150```，可以在发射时动态设置。
 
-对于 BL-M8812EU2 模块，我建议将“driver_txpower_override”设置为“40~50”，因为更高的值会导致放大器饱和。当“driver_txpower_override > ~40”时，BL-M8812EU2 模块的功耗可以达到 5V/2.xA。使用合适的 5V 电源和带风扇的散热器。
+对于 BL-M8812EU2 模块，我建议将"driver_txpower_override"设置为"40~50"，因为更高的值会导致放大器饱和。当"driver_txpower_override > ~40"时，BL-M8812EU2 模块的功耗可以达到 5V/2.xA。使用合适的 5V 电源和带风扇的散热器。
 

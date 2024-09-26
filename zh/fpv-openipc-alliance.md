@@ -13,7 +13,7 @@ OpenIPC 团队决定创建一个联盟，以推广和实施 FPV 系统组件的�
 
 ### 传感器的接口连接器
 
-第一个要标准化的组件将是任何 OpenIPC AIO 主板（“UltraSight”、“Thinker”、“Mario”）和任何 OpenIPC 传感器模块（IMX307、IMX335、IMX347、IMX415）之间的连接器。
+第一个要标准化的组件将是任何 OpenIPC AIO 主板（"UltraSight"、"Thinker"、"Mario"）和任何 OpenIPC 传感器模块（IMX307、IMX335、IMX347、IMX415）之间的连接器。
 
 我们提请您注意，其他公司的其他模块**不兼容**，并且肯定会对您的设备造成损坏。
 

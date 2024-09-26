@@ -9,7 +9,7 @@
 screen -L -Logfile ipcam-$(date +%s).log /dev/ttyUSB0 115200
 ```
 
-按照 OpenIPC 网页生成的说明进行操作。要访问 UBOOT，请在插入电源后立即按 Ctrl-C。要使网络稍后在 Linux 中工作：在 UBOOT 中的最后一个“重置”命令之前，请输入以下命令，如下所示：https://github.com/OpenIPC/wiki/blob/master/en/network-perversions.md
+按照 OpenIPC 网页生成的说明进行操作。要访问 UBOOT，请在插入电源后立即按 Ctrl-C。要使网络稍后在 Linux 中工作：在 UBOOT 中的最后一个"重置"命令之前，请输入以下命令，如下所示：https://github.com/OpenIPC/wiki/blob/master/en/network-perversions.md
 
 ```sh
 setenv extras 'hieth.phyaddru=3 hieth.mdioifu=0'
@@ -117,7 +117,7 @@ Watchdog timeout: 120
 ```
 
 ## 测试 RTSP 流：
-例如，在 Linux 上使用 "mpv" 或 Android 应用“IPCamViewer”。使用 "IPCamViewer" 时，选择 "Generic RTSP over UDP" （将密码和 IP 替换为您当前的密码和 IP）。
+例如，在 Linux 上使用 "mpv" 或 Android 应用"IPCamViewer"。使用 "IPCamViewer" 时，选择 "Generic RTSP over UDP" （将密码和 IP 替换为您当前的密码和 IP）。
 
 ```sh
 mpv rtsp://root:12345@192.168.1.188:554/stream=0

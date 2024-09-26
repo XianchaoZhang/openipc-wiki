@@ -27,7 +27,7 @@ export PATH="$PATH:/opt/openipc/mips-gcc472-glibc216-64bit/bin"
 cd u-boot-ingenic
 make distclean
 ```
-现在根据您的 T31 芯片类型选择最终的“make”命令
+现在根据您的 T31 芯片类型选择最终的"make"命令
 
 SoC  | Command
 ---- | ---------------------------
@@ -36,11 +36,11 @@ T31L | make isvp_t31_msc0_lite
 T31X | make isvp_t31_msc0_ddr128M
 T31A | make isvp_t31a_msc0_ddr128M
 
-现在你将得到编译好的uboot文件“u-boot-with-spl.bin”
+现在你将得到编译好的uboot文件"u-boot-with-spl.bin"
 
 ### 将 uboot 刻录到 SD 卡
 
-将 SD 卡插入您的电脑，运行“fdisk -l”进行检查，您应该看到类似我的情况的设备“磁盘 /dev/sdb：29.72 GiB，31914983424 字节，62333952 扇区”。
+将 SD 卡插入您的电脑，运行"fdisk -l"进行检查，您应该看到类似我的情况的设备"磁盘 /dev/sdb：29.72 GiB，31914983424 字节，62333952 扇区"。
 
 **注意！** 仔细检查 `/dev` 设备名称是否确实是您的 SD 卡，否则您可能会丢失其他驱动器上的数据
 
@@ -55,7 +55,7 @@ dd if=./u-boot-with-spl.bin of=/dev/sdb bs=512 seek=34
 
 #### OpenIPC uboot 自动重置问题
 
-如果无法从默认地址加载内核，OpenIPC 的 uboot 将自动重置，如果您尝试从 SD 卡侧载 uboot，而闪存芯片上有一个有效的 uboot，这将导致相机再次启动到原始 uboot。要禁用自动重置功能，请编辑“include/configs/isvp_common.h”，从“bootcmd”行末尾删除“; reset”
+如果无法从默认地址加载内核，OpenIPC 的 uboot 将自动重置，如果您尝试从 SD 卡侧载 uboot，而闪存芯片上有一个有效的 uboot，这将导致相机再次启动到原始 uboot。要禁用自动重置功能，请编辑"include/configs/isvp_common.h"，从"bootcmd"行末尾删除"; reset"
 
 ### 适用于其他 Ingenic SoC T10 T20 T21 和 T30 的 uboot
 
@@ -80,7 +80,7 @@ isvp_t30_msc0_ddr128M        mips        xburst      isvp_t30            ingenic
 isvp_t30a_msc0_ddr128M       mips        xburst      isvp_t30            ingenic        t30        isvp_t30:SPL_MMC_SUPPORT,ENV_IS_IN_MMC,GPT_CREATOR,JZ_MMC_MSC0,SFC_COMMOND,DDR2_128M,T30A
 ```
 
-根据您的芯片类型选择“make”命令
+根据您的芯片类型选择"make"命令
 
 SoC  | Command
 -----| -----------------------------
@@ -118,9 +118,9 @@ sf write 0x80600000 0x0 0x1000000
 
 #### 方法 2
 
-如果 uboot 中有“fatload”命令，则用于直接从 FAT 文件系统加载文件
+如果 uboot 中有"fatload"命令，则用于直接从 FAT 文件系统加载文件
 
-将 SD 卡的 FAT 文件系统挂载到 PC 上，将 OpenIPC 固件映像复制到其中。在 uboot 中，运行“fatls mmc 0”列出 SD 卡中的文件，然后
+将 SD 卡的 FAT 文件系统挂载到 PC 上，将 OpenIPC 固件映像复制到其中。在 uboot 中，运行"fatls mmc 0"列出 SD 卡中的文件，然后
 
 ```
 mw.b 0x80600000 0xff 0x1000000

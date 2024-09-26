@@ -18,7 +18,7 @@ CONFIG_ROOT_NFS=y
 
 ## 补丁文件要求
 
-- 补丁文件名应遵循格式“<number>-<description>.patch”。
+- 补丁文件名应遵循格式"<number>-<description>.patch"。
 
 - 补丁文件的名称中不应包含对软件包版本的任何引用。
 

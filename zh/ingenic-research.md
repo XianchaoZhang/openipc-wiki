@@ -4,7 +4,7 @@
 Ingenic SoC 研究和调试笔记 
 ----------------------------------------
 
-#### 使用 OpenIPC 附带的“ingenic-pwm”实用程序控制 ingenic 设备上的 PWM 通道：
+#### 使用 OpenIPC 附带的"ingenic-pwm"实用程序控制 ingenic 设备上的 PWM 通道：
 
 ```
 INGENIC PWM Control Version: Oct 19 2023_18:01:16_latest-2294-g72f266e7
@@ -33,8 +33,8 @@ Options:
 
 #### 启用完整工程调试
 
-启用：运行“switch_debug on”以启用调试 
-禁用：运行“switch debug off”或“switch_debug”以抑制调试输出
+启用：运行"switch_debug on"以启用调试 
+禁用：运行"switch debug off"或"switch_debug"以抑制调试输出
 
 启用将在 dmesg 中启用**FULL**工程调试输出。
 
@@ -76,7 +76,7 @@ Note:  Some old kernel modules may complain about missing symbols relating to dy
 [    4.357160] sample_core: Unknown symbol __dynamic_dev_dbg (err 1)
 [    4.361299] sample_hal: Unknown symbol __dynamic_dev_dbg (err 1)
 ```
-注意：一些旧的内核模块可能会抱怨缺少与动态调试相关的符号：要解决此问题，请确保将整个 OpenIPC 安装更新到 2023 年 10 月 20 日之后的最新版本，或尝试更新遇到问题的各个内核模块。作为最后的补救措施，您还可以在内核配置中禁用“CONFIG_DYNAMIC_DEBUG”，但广泛的测试并未表明这是一个问题。
+注意：一些旧的内核模块可能会抱怨缺少与动态调试相关的符号：要解决此问题，请确保将整个 OpenIPC 安装更新到 2023 年 10 月 20 日之后的最新版本，或尝试更新遇到问题的各个内核模块。作为最后的补救措施，您还可以在内核配置中禁用"CONFIG_DYNAMIC_DEBUG"，但广泛的测试并未表明这是一个问题。
 
 ---
 

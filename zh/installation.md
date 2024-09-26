@@ -9,7 +9,7 @@
 
 * [Coupler](https://github.com/openipc/coupler/) 项目提供了固件映像，可以使用许多相机的出厂固件内置的固件升级机制进行安装。
 
-* 使用供应商固件中包含的 [*U Boot* 引导加载程序](https://en.wikipedia.org/wiki/Das_U-Boot) 刷新 OpenIPC 固件。此方法会中断供应商固件的正常启动过程，而是指示 U-Boot 通过网络加载 OpenIPC 固件，并将其写入闪存（替换供应商固件的主要部分）。**此方法需要打开相机外壳**，以将 [**UART 适配器**][FTDI] 连接到相机的内部“控制台”串行/调试端口。
+* 使用供应商固件中包含的 [*U Boot* 引导加载程序](https://en.wikipedia.org/wiki/Das_U-Boot) 刷新 OpenIPC 固件。此方法会中断供应商固件的正常启动过程，而是指示 U-Boot 通过网络加载 OpenIPC 固件，并将其写入闪存（替换供应商固件的主要部分）。**此方法需要打开相机外壳**，以将 [**UART 适配器**][FTDI] 连接到相机的内部"控制台"串行/调试端口。
 
 
 使用 Coupler 安装 OpenIPC 固件。 
@@ -33,7 +33,7 @@ _Hisilicon Hi3518EV100、Ingenic T20、T31 和 T40 SoC 标记。相关符号以�
 
 ### 第 2 步. 安装并设置 TFTP 服务器。
 
-TFTP 代表“简单文件传输协议”。顾名思义，它是一种非常简单的协议，用于通过本地计算机网络传输文件。TFTP 不支持身份验证。其代码非常小巧简单，因此 TFTP 客户端广泛用于瘦客户端和嵌入式系统，用于从本地网络上的指定启动服务器检索可启动映像。
+TFTP 代表"简单文件传输协议"。顾名思义，它是一种非常简单的协议，用于通过本地计算机网络传输文件。TFTP 不支持身份验证。其代码非常小巧简单，因此 TFTP 客户端广泛用于瘦客户端和嵌入式系统，用于从本地网络上的指定启动服务器检索可启动映像。
 
 #### 如果您有 Linux...
 
@@ -71,7 +71,7 @@ __在将该适配器连接到相机之前，请确保其工作电压设置为 3.
 screen -L -Logfile ipcam-$(date +%s).log /dev/ttyUSB0 115200
 ```
 
-使用“Ctrl-a”后跟“\”退出会话。
+使用"Ctrl-a"后跟"\"退出会话。
 
 #### `minicom`
 
@@ -81,7 +81,7 @@ screen -L -Logfile ipcam-$(date +%s).log /dev/ttyUSB0 115200
 minicom -b 115200 -8 --capturefile=ipcam-$(date +%s).log --color=on -D /dev/ttyUSB0
 ```
 
-使用“Ctrl-a”然后按“x”退出会话。
+使用"Ctrl-a"然后按"x"退出会话。
 
 #### `picocom`
 
@@ -91,7 +91,7 @@ minicom -b 115200 -8 --capturefile=ipcam-$(date +%s).log --color=on -D /dev/ttyU
 picocom -b 115200 --databits 8 --parity n --stopbits 1 --flow n --logfile=ipcam-$(date +%s).log /dev/ttyUSB0
 ```
 
-使用“Ctrl-a”然后按“Ctrl-x”退出会话。
+使用"Ctrl-a"然后按"Ctrl-x"退出会话。
 
 #### PuTTY
 
@@ -105,7 +105,7 @@ picocom -b 115200 --databits 8 --parity n --stopbits 1 --flow n --logfile=ipcam-
 
 找到 `TX` 焊盘后，将其连接到适配器上的 `RX` 针脚。是的，这是一个交叉连接。无论传输什么都会进入接收器，反之亦然。现在，将一个重物（铁路螺母、古董锡焊料、一杯伏特加酒（满））放在计算机键盘的任意字母键上，然后开始将适配器剩余的 `TX` 针脚连接到相机上的不同焊盘，直到看到它反馈到终端。事实上，您已成功完成与相机的 UART 连接。现在您可以喝伏特加了。
 
-注意！通常，UART 连接器上有第四个触点，标记为“VCC”。制造商在初始编程期间使用它来为相机供电。我们强烈建议不要通过该引脚为相机供电，而应为此使用 OEM 电源连接器。
+注意！通常，UART 连接器上有第四个触点，标记为"VCC"。制造商在初始编程期间使用它来为相机供电。我们强烈建议不要通过该引脚为相机供电，而应为此使用 OEM 电源连接器。
 
 ### 步骤 4. 访问引导加载程序。
 
@@ -145,9 +145,9 @@ SF: Detected EN25QH64
 
 ### 步骤6. 保存原始固件。
 
-访问引导加载程序控制台后，运行“help”以获取可用命令列表。检查其中是否有“tftp”。如果有，那么保存原始固件应该很容易。您只需从第 2 步设置对 TFTP 服务器的访问权限。
+访问引导加载程序控制台后，运行"help"以获取可用命令列表。检查其中是否有"tftp"。如果有，那么保存原始固件应该很容易。您只需从第 2 步设置对 TFTP 服务器的访问权限。
 
-注意！如果您的引导程序没有“tftp”，您仍然可以复制原始固件。[阅读更多]（help-uboot.md）。
+注意！如果您的引导程序没有"tftp"，您仍然可以复制原始固件。[阅读更多]（help-uboot.md）。
 
 使用 `printenv` 命令检查系统环境。查找 `ipaddr`、`netmask`、`gatewayip` 和 `serverip` 参数。前三个设置 IP 地址、摄像机的网络掩码以及用于访问本地网络的网络网关的 IP 地址。第四个参数是 TFTP 服务器的 IP 地址。通过 `setenv` 命令分配值（使用与您的本地网络相对应的 IP 地址和网络掩码），然后使用 `saveenv` 命令将新值保存到环境中。
 

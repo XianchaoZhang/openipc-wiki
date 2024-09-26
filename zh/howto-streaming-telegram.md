@@ -11,11 +11,11 @@
 
 ![](../images/howto-streaming-telegram-2.webp)
 
-在相机上打开“/etc/majestic.yaml”，并将 URL 和密钥添加到配置的“outgoing”部分。
+在相机上打开"/etc/majestic.yaml"，并将 URL 和密钥添加到配置的"outgoing"部分。
 
 **注意：**它将流式传输 `video0`。**必须**将其配置为视频编解码器：`h264`。
 
-**注意**：不要忘记在参数前添加“-”号！
+**注意**：不要忘记在参数前添加"-"号！
 
 **注意：**`outgoing` 部分可能会影响其他部分的添加。记住！
 

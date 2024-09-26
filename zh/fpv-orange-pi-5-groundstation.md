@@ -76,7 +76,7 @@ rtl8812au 驱动程序安装
 
 重启设备
 
-TODO：或者弄清楚如何在不完全重启的情况下加载驱动程序。尝试“modprobe 88xxau”
+TODO：或者弄清楚如何在不完全重启的情况下加载驱动程序。尝试"modprobe 88xxau"
 
 
 ***
@@ -107,7 +107,7 @@ WFB-ng 安装
 
 更改频道以匹配 vtx
 
-将区域从“BO”更改为“00”
+将区域从"BO"更改为"00"
 
 
 
@@ -421,7 +421,7 @@ add:
 
 `./buildFFMPEG.sh`
 
-现在我们可以使用 ffmpeg 将 mkv 视频文件硬件转码为 hevc mp4。我们可以通过增强 dvr.sh 脚本在每次录制结束时自动执行此操作。打开 /home/ubuntu/scripts 目录中的 dvr.sh 脚本，找到行“kill $RUNNING”并在其下方添加以下两行。
+现在我们可以使用 ffmpeg 将 mkv 视频文件硬件转码为 hevc mp4。我们可以通过增强 dvr.sh 脚本在每次录制结束时自动执行此操作。打开 /home/ubuntu/scripts 目录中的 dvr.sh 脚本，找到行"kill $RUNNING"并在其下方添加以下两行。
 
 	sleep 0.2
  	ffmpeg -hwaccel rkmpp -i record_${current_date}.mkv -c:v hevc_rkmpp record_${current_date}.mp4

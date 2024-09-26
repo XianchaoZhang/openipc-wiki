@@ -35,7 +35,7 @@ cat /dev/mtdblock4 > /mnt/Public/mtd4
 ### 通过 #gktool (工具平台) 闪存 xm boot u-boot.bin.img_cut
 
 1. 在 ToolPlatform 中，选择安装适配器的 COM 端口、传输模式 - 串行。
-2. 在“Burn Fastboot”选项卡中，选择“Flash type：spinor”、“File：file u-boot.bin.img_cut”。
+2. 在"Burn Fastboot"选项卡中，选择"Flash type：spinor"、"File：file u-boot.bin.img_cut"。
 3. 关闭相机，按刻录按钮，等待 5 秒，打开相机。固件将开始。
 4. 重新启动相机电源。
 5. 在相机打开时按几次 CTRL-C（快速按），通过 PUTTY 登录 U-boot。输入命令 如果重新启动没有帮助，并且控制台中有空格，则重复步骤 2。之后相机就可以工作了。
@@ -71,6 +71,6 @@ reset
 如果重新启动没有帮助，并且控制台中有空格，则重复步骤 2。
 之后相机就可以工作了。
 
-启动后，在 Putty 控制台中运行“firstboot”。
+启动后，在 Putty 控制台中运行"firstboot"。
 
 [t1]: https://t.me/openipc_modding

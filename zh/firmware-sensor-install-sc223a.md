@@ -18,7 +18,7 @@ curl -s -L -o /usr/lib/sensors/libsns_sc223a.so https://github.com/OpenIPC/firmw
 curl -s -L -o /etc/sensors/sc223a_i2c_1080p.ini https://github.com/OpenIPC/firmware/raw/master/general/package/goke-osdrv-gk7205v200/files/sensor/config/sc223a_i2c_1080p.ini
 ```
 
-根据您的传感器规格调整 /etc/majestic.yaml 中的 fps 值。在您的传感器配置文件 [/etc/sensors/sc223a_i2c_1080p.ini](https://github.com/OpenIPC/firmware/raw/master/general/package/goke-osdrv-gk7205v200/files/sensor/config/sc223a_i2c_1080p.ini) 中搜索“Isp_FrameRate”。
+根据您的传感器规格调整 /etc/majestic.yaml 中的 fps 值。在您的传感器配置文件 [/etc/sensors/sc223a_i2c_1080p.ini](https://github.com/OpenIPC/firmware/raw/master/general/package/goke-osdrv-gk7205v200/files/sensor/config/sc223a_i2c_1080p.ini) 中搜索"Isp_FrameRate"。
 
 ```sh
 cli -s .video0.fps 30
@@ -31,5 +31,5 @@ killall majestic
 majestic
 ```
 
-[有关传感器“sc223a”的更多信息]（https://github.com/RoboSchmied/Documentation/blob/main/sc223a.md）
+[有关传感器"sc223a"的更多信息]（https://github.com/RoboSchmied/Documentation/blob/main/sc223a.md）
 

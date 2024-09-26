@@ -29,7 +29,7 @@
 
 5 兆像素 IMX335 传感器将允许您在进一步的视频处理过程中使用数字稳定功能。
 
-“球”非常适合作为身体，因为......它们具有最小的尺寸和流线型的形状。塑料的重量轻，但有许多通风孔，因此不能在雨天或靠近溅水源的地方使用。金属的较重，但不透气。 50x50的配电箱看起来很有趣，可以加倍形成一个立方体。
+"球"非常适合作为身体，因为......它们具有最小的尺寸和流线型的形状。塑料的重量轻，但有许多通风孔，因此不能在雨天或靠近溅水源的地方使用。金属的较重，但不透气。 50x50的配电箱看起来很有趣，可以加倍形成一个立方体。
 
 <palign="center"> 
 <img src="https://github.com/OpenIPC/wiki/blob/master/images/actioncam-housing-front.webp" alt="外壳前视图"/> 
@@ -77,7 +77,7 @@ cd /etc/init.d
 chmod -x S40network S49ntpd S50dropbear S50httpd S50snmpd S50telnet S60crond S92motion S93telegrambot
 ```
 
-并创建一个新的“S94actioncam”：
+并创建一个新的"S94actioncam"：
 
 ```
 #!/bin/sh
@@ -93,7 +93,7 @@ mkdir $number
 mv *.mp4 $number/
 ```
 
-还有“S96led”：
+还有"S96led"：
 
 ```
 #!/bin/sh
@@ -188,7 +188,7 @@ cli -s .records.path /mnt/mmcblk0p1/%Y-%m-%d-%H.mp4
 * RGB LED 用于操作指示
 * 使用按钮进行电源控制以将最后编码的块正确写入闪存驱动器
 * 基于AXP173（AXP176）的电源系统，用于监控电池消耗
-* 使用具有不同镜片的“两只眼睛”板
+* 使用具有不同镜片的"两只眼睛"板
 * RTC 用于正确的文件命名
 * GPS用于记录拍摄坐标（在元数据或字幕中）
 * 陀螺仪用于视频稳定

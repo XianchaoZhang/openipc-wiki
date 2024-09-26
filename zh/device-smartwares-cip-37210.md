@@ -42,7 +42,7 @@
 
 **总结：**靠近黑色螺丝的针孔是 RX，旁边的是 TX，再旁边的是 GND。将 GND 连接到 GND，将 TX 连接到 RX，将 RX 连接到 TX。
 
-![uart_cip-37210](/images/uart_cip-37210_cropped.jpg “CIP-37210 PCB 上标记的 UART 针孔”)
+![uart_cip-37210](/images/uart_cip-37210_cropped.jpg "CIP-37210 PCB 上标记的 UART 针孔")
 
 我使用简单的公对母杜邦跳线连接到针孔。当然还有更好的解决方案，比如将连接器焊接到针孔上或使用测试钩，但只要跳线不接触，它就可以正常工作。
 
@@ -56,13 +56,13 @@
 sudo screen -L /dev/ttyUSB0 115200
 ```
 
-现在是时候使用我在互联网上找到的密码“I81ou812”以 root 身份登录了。microSD 卡已自动安装到安装点“/mnt/sd/”，因此让我们在 SD 卡上创建一个新目录并转储闪存的内容：
+现在是时候使用我在互联网上找到的密码"I81ou812"以 root 身份登录了。microSD 卡已自动安装到安装点"/mnt/sd/"，因此让我们在 SD 卡上创建一个新目录并转储闪存的内容：
 
 ```sh
 mkdir /mnt/sd/image
 for mtd in $(ls /dev/mtdblock*); do dd if=${mtd} of=/mnt/sd/image/${mtd##/*/}.bin; done
 ```
-您可能需要对另一个文件夹重复此步骤，并比较二进制文件的 md5 校验和以确保转储成功。使用“C-a”然后按“d”退出屏幕，将 microSD 卡重新插入计算机并备份二进制文件。
+您可能需要对另一个文件夹重复此步骤，并比较二进制文件的 md5 校验和以确保转储成功。使用"C-a"然后按"d"退出屏幕，将 microSD 卡重新插入计算机并备份二进制文件。
 
 #### 刷新 OpenIPC
 
@@ -170,7 +170,7 @@ openipc-hi3518ev200 login: root
  Please visit https://openipc.org/sponsor/ to learn more. Thank you.
 ```
 
-接下来，需要设置刻录实用程序： 现在我们需要下载正确的 uboot 二进制文件 确保没有进程阻止您的 USB 转 TTL 适配器： 如有必要，请终止该进程： 关闭相机电源，并断开并重新连接 USB 转 TTL 适配器。 现在输入以下命令并打开相机电源： 按任意键停止自动启动，您将看到 OpenIPC u-boot shell！ 首先，我们需要检查我们的 microSD 卡是否可以使用： 预期输出如下： 很好！现在是时候将二进制文件加载到内存中了。这些变量是 OpenIPC u-boot 知道要解析的环境变量，因此您只需复制和粘贴： 这应该会导致以下输出： 现在是时候写下并祈祷了： 预期输出如下所示： 如果这里出现任何问题，请不要关闭设备电源并向提到的 [Telegram 组](https://t.me/openipc) 寻求帮助！否则，输入“reset”并按任意键进入刚刚刷新的 u-boot 以停止自动启动。运行以下命令即可完成：现在移除 SD 卡并重新启动，再次输入“reset”，您将看到如下信息：root 密码为“12345”。第一次登录后，不要忘记使用“passwd”更改密码！
+接下来，需要设置刻录实用程序： 现在我们需要下载正确的 uboot 二进制文件 确保没有进程阻止您的 USB 转 TTL 适配器： 如有必要，请终止该进程： 关闭相机电源，并断开并重新连接 USB 转 TTL 适配器。 现在输入以下命令并打开相机电源： 按任意键停止自动启动，您将看到 OpenIPC u-boot shell！ 首先，我们需要检查我们的 microSD 卡是否可以使用： 预期输出如下： 很好！现在是时候将二进制文件加载到内存中了。这些变量是 OpenIPC u-boot 知道要解析的环境变量，因此您只需复制和粘贴： 这应该会导致以下输出： 现在是时候写下并祈祷了： 预期输出如下所示： 如果这里出现任何问题，请不要关闭设备电源并向提到的 [Telegram 组](https://t.me/openipc) 寻求帮助！否则，输入"reset"并按任意键进入刚刚刷新的 u-boot 以停止自动启动。运行以下命令即可完成：现在移除 SD 卡并重新启动，再次输入"reset"，您将看到如下信息：root 密码为"12345"。第一次登录后，不要忘记使用"passwd"更改密码！
 
 如果您在学习本教程时遇到困难但仍想在 Smartwares CIP-37210 上尝试 OpenIPC，您可以[在 open collective 购买预装了 OpenIPC v2.2 固件的产品](https://opencollective.com/openipc/contribute/wifi-camera-showme-by-openipc-44355)。
 
@@ -226,7 +226,7 @@ ip addr
 ```
 然后根据您的需要输入正确的值，例如：您可以按如下方式检查设置：最后一步是配置 wlan0 接口：现在是时候检查它是否正常工作了：检查您是否可以 ping 和 ssh 进入相机。重新启动并检查，相机是否自动连接到您的 wifi 网络。重新组装相机，现在是时候告别 UART 并使用 ssh 和 Web 界面了。（凭据是 root 和您之前设置的密码。）
 
-最后，您应该查看“/etc/majestic.yaml”，特别是按如下所示设置此部分，以便为夜间模式和音频提供正确的 GPIO 映射。
+最后，您应该查看"/etc/majestic.yaml"，特别是按如下所示设置此部分，以便为夜间模式和音频提供正确的 GPIO 映射。
 
 ```yaml
 audio:

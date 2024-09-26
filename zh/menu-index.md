@@ -28,7 +28,7 @@ OpenIPC 是一个基于 Buildroot/OpenWrt 项目的 Linux 操作系统，针对�
 * [OpenIPC 开发](https://t.me/openipc_software) (RU) - HiSilicon、XM 在 OpenWrt 中的移植和编程器问题，[*](https://combot.org/c/-1001196905312)
 * [OpenIPC 建议](https://t.me/openipc_advice) (RU) - 问题、寻找解决方案、长时间对话， [*](https://combot.org/c/1385065634)
 * [OpenIPC Iranian](https://t.me/joinchat/T_GwQUBTJdfXJrFb) (IR) - 伊朗用户特别群组 / تیم OpenIPC برای کاربران ایرانی, [*](https://combot.org/c/-1001341239361)
-* [OpenIPC demo](https://t.me/openipc_demo) (EN/RU) - 带按钮的测试机器人，连接后，给出“/menu”, [*](https://combot.org/c/1414887196)
+* [OpenIPC demo](https://t.me/openipc_demo) (EN/RU) - 带按钮的测试机器人，连接后，给出"/menu", [*](https://combot.org/c/1414887196)
 * [OpenIPC ExIPCam](https://t.me/ExIPCam) (RU) - ExIPCam 程序和硬件/软件修复设备, [*](https://combot.org/c/1213889378)
 * [OpenIPC 更新](https://t.me/s/openipc_updates) (RU) - 固件和软件更新信息频道
 * [OpenIPC dev](https://t.me/s/openipc_dev) - 固件和软件开发频道

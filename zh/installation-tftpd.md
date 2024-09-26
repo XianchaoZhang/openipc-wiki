@@ -9,7 +9,7 @@
 ### 安装 Docker Composer 按照[Docker 安装说明][1]进行操作。
 
 ### Create Docker image files
-创建 Docker 镜像文件 创建一个名为“Dockerfile”的文件，内容如下： 
+创建 Docker 镜像文件 创建一个名为"Dockerfile"的文件，内容如下： 
 ```dockerfile
 FROM debian:latest
 
@@ -23,7 +23,7 @@ in.tftpd --foreground --create --secure --ipv4 --verbose --user tftp \
 --address 0.0.0.0:69 --blocksize 1468 /srv/tftp
 ```
 
-在同一目录中，创建一个名为“docker-compose.yml”的文件，内容如下：
+在同一目录中，创建一个名为"docker-compose.yml"的文件，内容如下：
 ```yaml
 version: '3.9'
 services:
@@ -40,7 +40,7 @@ services:
 ```bash
 docker-compose up -d
 ```
-Docker 将在必要时构建镜像并在后台启动它。在构建容器期间，Docker 还将创建“tftp/”子目录，从中提供您的文件。Docker 充当组“input”中的用户“systemd-network”来访问该目录。如果您想允许保存通过 TFTP 发送到您的机器的文件，您需要更改该目录的所有权：或者，您可以放宽该目录的权限：使用您计算机的 IP 地址从本地网络上的其他机器访问 TFTP 服务器。
+Docker 将在必要时构建镜像并在后台启动它。在构建容器期间，Docker 还将创建"tftp/"子目录，从中提供您的文件。Docker 充当组"input"中的用户"systemd-network"来访问该目录。如果您想允许保存通过 TFTP 发送到您的机器的文件，您需要更改该目录的所有权：或者，您可以放宽该目录的权限：使用您计算机的 IP 地址从本地网络上的其他机器访问 TFTP 服务器。
 
 ```bash
 sudo chown systemd-network:input ./tftp

@@ -5,7 +5,7 @@
 ------------
 
 ### 准备环境 
-在 booloader shell 中，检查“baseaddr”变量是否已定义。
+在 booloader shell 中，检查"baseaddr"变量是否已定义。
 
 ```bash
 printenv baseaddr
@@ -18,7 +18,7 @@ printenv baseaddr
 setenv baseaddr 0x80600000
 ```
 
-将闪存芯片的十六进制大小分配给名为“flashsize”的变量。
+将闪存芯片的十六进制大小分配给名为"flashsize"的变量。
 
 ```bash
 # Use 0x800000 for an 8MB flash chip, 0x1000000 for 16MB.
@@ -35,7 +35,7 @@ saveenv
 
 在开始之前，[准备环境](#prepare-the-environment)。
 
-在用于连接 UART 端口的终端程序中，启用保存会话日志文件。我喜欢为此使用“screen”，用于连接 UART 适配器并将活动会话记录到文件的命令如下所示：
+在用于连接 UART 端口的终端程序中，启用保存会话日志文件。我喜欢为此使用"screen"，用于连接 UART 适配器并将活动会话记录到文件的命令如下所示：
 
 ```bash
 screen -L -Logfile fulldump.log /dev/ttyUSB0 115200
@@ -111,7 +111,7 @@ sf read ${baseaddr} 0x0 ${flashsize}
 mmc write ${baseaddr} 0x10 0x8000
 ```
 
-从相机中取出卡并将其插入运行 Linux 的计算机。使用“dd”命令将数据从卡复制到计算机上的二进制文件。
+从相机中取出卡并将其插入运行 Linux 的计算机。使用"dd"命令将数据从卡复制到计算机上的二进制文件。
 
 以 8MB 为例：
 
@@ -129,7 +129,7 @@ sudo dd bs=512 skip=16 count=32768 if=/dev/sdc of=./fulldump.bin
 
 有些相机只有无线连接，无法直接从引导加载程序获得。大多数此类相机也有 SD 卡插槽，但有些没有，或者由于某种原因无法使用，或者您没有卡，或者其他原因。无论如何，您仍然可以将二进制图像上传到相机并运行它，或将其保存到闪存中。方法如下。
 
-首先，您需要在台式计算机上安装“lrzsz”包。我假设它运行 Linux，最好是 Debian 家族，这样示例会更容易。因此，运行此命令以满足先决条件：
+首先，您需要在台式计算机上安装"lrzsz"包。我假设它运行 Linux，最好是 Debian 家族，这样示例会更容易。因此，运行此命令以满足先决条件：
 
 ```bash
 apt install lrzsz
@@ -137,19 +137,19 @@ apt install lrzsz
 
 现在您已经准备好了。
 
-将要上传的二进制文件放入您将从中启动相机“屏幕”会话的同一目录中。启动会话并使用组合键中断启动例程，启动引导加载程序控制台。
+将要上传的二进制文件放入您将从中启动相机"屏幕"会话的同一目录中。启动会话并使用组合键中断启动例程，启动引导加载程序控制台。
 
-现在您可以运行“help”并检查您的 bootloader 版本支持哪些数据传输协议。如果您在命令列表中看到“loady”，则可以使用 ymodem 协议。在您的相机上运行“loady”，然后按“Ctrl-a”并按“:”（分号）。它会将您切换到屏幕底部的命令行。
+现在您可以运行"help"并检查您的 bootloader 版本支持哪些数据传输协议。如果您在命令列表中看到"loady"，则可以使用 ymodem 协议。在您的相机上运行"loady"，然后按"Ctrl-a"并按":"（分号）。它会将您切换到屏幕底部的命令行。
 
 输入 `exec !! sz --ymodem filename.bin`，其中 _filename.bin_ 并查看通过串行连接上传的文件。速度为 115200 bps。很慢，非常慢。
 
-文件上传后，你就可以做通常的魔术了。要么立即使用“bootm”从内存映像启动，要么将其写入闪存。
+文件上传后，你就可以做通常的魔术了。要么立即使用"bootm"从内存映像启动，要么将其写入闪存。
 
 ### 通过串行连接刷新完整图像
 
 在开始之前，[准备环境](#prepare-the-environment)。
 
-提交设置表单并点击“替代方法”按钮下隐藏的链接后，从 [OpenIPC 网站](https://openipc.org/supported-hardware/) 下载适用于您的 SoC 和闪存芯片的完整固件二进制文件。
+提交设置表单并点击"替代方法"按钮下隐藏的链接后，从 [OpenIPC 网站](https://openipc.org/supported-hardware/) 下载适用于您的 SoC 和闪存芯片的完整固件二进制文件。
 
 ![](../images/firmware-full-binary-link.webp)
 
@@ -166,7 +166,7 @@ mw.b ${baseaddr} 0xff ${flashsize}
 loady ${baseaddr}
 ```
 
-按“Ctrl-a”然后按“:”，然后输入
+按"Ctrl-a"然后按":"，然后输入
 
 ```bash
 exec !! sz --ymodem fullimage.bin
@@ -215,13 +215,13 @@ sf probe 0; sf erase 0x0 ${flashsize}; sf write ${baseaddr} 0x0 ${filesize}
 reset
 ```
 
-首次启动时，再次登录引导加载程序 shell 并运行“run setnor16m”命令重新映射分区。
+首次启动时，再次登录引导加载程序 shell 并运行"run setnor16m"命令重新映射分区。
 
 ### 从 SD 卡读取二进制图像。
 
 在开始之前，[准备环境](#prepare-the-environment)。
 
-如果您的相机支持 SD 卡并且您在引导加载程序中有“fatload”命令，那么您可以从 SD 卡读取固件二进制文件。
+如果您的相机支持 SD 卡并且您在引导加载程序中有"fatload"命令，那么您可以从 SD 卡读取固件二进制文件。
 
 首先，准备卡：将其格式化为 FAT 文件系统，并将引导加载程序、内核和 rootfs 二进制文件放在那里。将卡插入相机并启动引导加载程序控制台。
 
@@ -302,7 +302,7 @@ __不要忘记备份您的原始固件！__
 
 在开始之前，[准备环境](#prepare-the-environment)。
 
-如果在尝试设置环境变量时出现“参数过多”错误，请尝试在 Linux 内部使用“fw_setenv”而不是 U-boot 中的“setenv”执行此操作。
+如果在尝试设置环境变量时出现"参数过多"错误，请尝试在 Linux 内部使用"fw_setenv"而不是 U-boot 中的"setenv"执行此操作。
 
 __U-boot 控制台：__
 

@@ -37,7 +37,7 @@ make br-go2rtc-rebuild BOARD=board_config_name
 
 ### 编辑配置文件
 
-将配置文件“go2rtc.yaml”放入“/etc/”目录，示例配置：
+将配置文件"go2rtc.yaml"放入"/etc/"目录，示例配置：
 
 ```
 log:
@@ -72,7 +72,7 @@ homekit:
 /usr/bin/go2rtc -config /etc/go2rtc.yaml &
 ```
 
-在您的 Apple 设备上打开 Home 应用程序，单击右上角的“+”按钮，OpenIPC 摄像头应该会自动出现在那里，在配置文件中输入引脚号码以与其配对。
+在您的 Apple 设备上打开 Home 应用程序，单击右上角的"+"按钮，OpenIPC 摄像头应该会自动出现在那里，在配置文件中输入引脚号码以与其配对。
 
 ### 启动时自动运行
 

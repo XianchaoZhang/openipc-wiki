@@ -1,7 +1,7 @@
 
 # 君正PTZ配置指南
 
-电机模块包含在默认安装的“openingogenic” repo 中，作为“motor.ko”内核模块。
+电机模块包含在默认安装的"openingogenic" repo 中，作为"motor.ko"内核模块。
 
 ## 加载模块
 
@@ -11,7 +11,7 @@
 modprobe motor hmaxstep=2540 vmaxstep=720 hst1=52 hst2=53 hst3=57 hst4=51 vst1=59 vst2=61 vst3=62 vst4=63
 ```
 
-要在启动期间自动执行此过程，请将行“sample_motor hmaxstep=2540 vmaxstep=720 hst1=52 hst2=53 hst3=57 hst4=51 vst1=59 vst2=61 vst3=62 vst4=63”添加到“/etc/modules”。
+要在启动期间自动执行此过程，请将行"sample_motor hmaxstep=2540 vmaxstep=720 hst1=52 hst2=53 hst3=57 hst4=51 vst1=59 vst2=61 vst3=62 vst4=63"添加到"/etc/modules"。
 
 ## 模块配置
 
@@ -21,7 +21,7 @@ modprobe motor hmaxstep=2540 vmaxstep=720 hst1=52 hst2=53 hst3=57 hst4=51 vst1=5
 
 控制电机
 
-使用“ingenic-motor”命令行实用程序进行电机控制。
+使用"ingenic-motor"命令行实用程序进行电机控制。
 
 ## 关于 GPIO 处理的注意事项
 

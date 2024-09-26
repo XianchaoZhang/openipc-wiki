@@ -4,7 +4,7 @@
 
 [产品数据表]（https://chacon.com/datasharing/doc/IPCAM-RI01/ipcam-ri01_user_manual.pdf）
 
-这款相机是“PPStrong”制造公司的品牌重塑。我相信市场上还有其他相机使用相同的硬件（或略有改动的类似硬件）。
+这款相机是"PPStrong"制造公司的品牌重塑。我相信市场上还有其他相机使用相同的硬件（或略有改动的类似硬件）。
 
 ## 硬件
 
@@ -28,13 +28,13 @@
 
 ### 硬件详细信息
 
-摄像机主板标识为“SPEED5S-H1MB_F23”。
+摄像机主板标识为"SPEED5S-H1MB_F23"。
 
 ![device_chacon_ipcam-ri01_board_top](https://user-images.githubusercontent.com/1659543/149513254-d326f57f-902b-4c58-98e6-73bfe7fa33d2.jpg) 
 主板顶部：
 - 右侧有一个微型 SD 卡插槽
-- 标有“IR”的连接器为红外 LED、红色 LED 和蓝色 LED 供电
-- 连接器“ICR”为红外截止滤波器供电
+- 标有"IR"的连接器为红外 LED、红色 LED 和蓝色 LED 供电
+- 连接器"ICR"为红外截止滤波器供电
 - 未识别的连接器是麦克风的输入
 - SPI NOR 闪存芯片 (QH128A)
 
@@ -115,7 +115,7 @@
 
 ## 原始固件
 
-相机 uBoot 受“pps_password”密码保护。
+相机 uBoot 受"pps_password"密码保护。
 
 ### 创建备份 
 要备份原始固件，您需要一个连接到主板的 USB 串行适配器和一张 SD 卡。
@@ -153,7 +153,7 @@ MMC write: dev # 0, block # 0, count 16384 ... had init
 pps # 
 ```
 
-示例输出（8Mb 闪存）：这将以“原始模式”（无文件系统）将整个闪存写入 mmc 卡。
+示例输出（8Mb 闪存）：这将以"原始模式"（无文件系统）将整个闪存写入 mmc 卡。
 
 **WARNING**: if you leave the card inserted in the camera, and it boots the original FW, the card will be formated and the backup lost!
   
@@ -404,7 +404,7 @@ ____set essid
 
 摄像机原始FW运行具有身份验证的REST服务器（用户：PpStRoNg，密码：#%&wL1@\*tU123zv）。
 
-最有趣的功能之一是“runcmd”函数（将 \<your_cam_ip\> 替换为您的相机 IP 地址）：
+最有趣的功能之一是"runcmd"函数（将 \<your_cam_ip\> 替换为您的相机 IP 地址）：
 
 发送请求（注意密码中的 & 用 \\ 转义）：
 ```
@@ -425,7 +425,7 @@ Content-Length: 129
 }
 ```
 
-在最新的 FW 中，他们已经删除了“telnetd”二进制文件，因此您需要将其放在 sdcard 上：[telnetd.zip](https://github.com/ljalves/wiki/files/7875319/telnetd.zip)
+在最新的 FW 中，他们已经删除了"telnetd"二进制文件，因此您需要将其放在 sdcard 上：[telnetd.zip](https://github.com/ljalves/wiki/files/7875319/telnetd.zip)
 
 
 要启动服务器，请将 telnetd 二进制文件复制到 SD 卡并运行：

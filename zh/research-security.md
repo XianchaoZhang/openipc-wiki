@@ -22,13 +22,13 @@ $1$bh2njiGH$4duacOMcXDh6myANzbZTf.
 
 第二部分 `$bh2njiGH` 是盐 - 在对明文密码进行哈希处理之前添加到其中的字符串，目的是对同一密码生成的哈希值进行随机化，并防止 [彩虹表][1] 攻击。
 
-最后一部分“$4duacOMcXDh6myANzbZTf.”是哈希值。当您输入密码时，它会与提供的盐连接起来，然后使用提供的哈希算法进行哈希处理，并将结果与​​哈希值进行比较。相同的密码、盐和哈希方法将始终产生相同的结果。
+最后一部分"$4duacOMcXDh6myANzbZTf."是哈希值。当您输入密码时，它会与提供的盐连接起来，然后使用提供的哈希算法进行哈希处理，并将结果与​​哈希值进行比较。相同的密码、盐和哈希方法将始终产生相同的结果。
 
 哈希算法是一种单向加密方法，这意味着哈希不能解密回明文密码，但可以对明文密码的可用变体进行哈希处理，直到找到匹配项。这种方法称为[暴力攻击][2]。
 
 IP 摄像机倾向于使用相对简单且快速的 MD5 哈希算法，因此使用密码破解软件和强大的计算资源，可以在几周或几天甚至几小时内破解原始明文密码，尤其是使用高质量的字典。
 
-在上面的例子中，我们使用了密码“openipc”。您可以使用“mkpasswd”或“openssl”检查密码的有效性：
+在上面的例子中，我们使用了密码"openipc"。您可以使用"mkpasswd"或"openssl"检查密码的有效性：
 
 ```bash
 $ mkpasswd -m md5crypt -S bh2njiGH openipc
@@ -118,16 +118,16 @@ mkdir squashfs-temp
 cd squashfs-temp
 unsquashfs system.dat
 ```
-将“system.dat”复制到 SD 卡：在 Linux 计算机上，使用“unsquashfs”解压“system.dat”文件：找到指南文件并在十六进制编辑器中编辑其内容，以修改每次重启时写入密码的文件的名称。搜索“/etc/passwd”并将其名称中的字母更改为其他字母，例如“/etc/passwT”。
+将"system.dat"复制到 SD 卡：在 Linux 计算机上，使用"unsquashfs"解压"system.dat"文件：找到指南文件并在十六进制编辑器中编辑其内容，以修改每次重启时写入密码的文件的名称。搜索"/etc/passwd"并将其名称中的字母更改为其他字母，例如"/etc/passwT"。
 
 使用 `mksquashfs` 打包 squash 文件系统：
 
 ```bash
 mksquashfs ./squashfs-root ./file -comp xz -no-xattrs -noappend -no-exports -all-root -quiet -b 131072
 ```
-并将其从 SD 卡复制回相机上的“/rom”目录。
+并将其从 SD 卡复制回相机上的"/rom"目录。
 
-现在您可以用自己的密码替换“/rom/etc/passwd”中的密码，当您重新启动设备时，您将拥有使用自己密码的完整工作系统。
+现在您可以用自己的密码替换"/rom/etc/passwd"中的密码，当您重新启动设备时，您将拥有使用自己密码的完整工作系统。
 
 
 ### 软件
