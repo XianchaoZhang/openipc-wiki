@@ -40,7 +40,7 @@ setenv serverip 192.168.1.2         //задать адрес компа с TFTP
 
 saveenv
 ```
-### 内核和文件系统映像 
+### 内核和文件系统镜像 
 ```
 mw.b ${baseaddr} ff 0x1000000
 tftp ${baseaddr} uImage.${soc}

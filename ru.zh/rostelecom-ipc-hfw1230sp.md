@@ -18,11 +18,11 @@ Rostelecom IPC-HFW1230SP/IPC-HDW1230SP
 - NAND内存
 - 传感器ov2735
 
-## 固件 从 GitHub 下载存档，其中包含现有处理器的引导加载程序以及内核和文件系统映像。
+## 固件 从 GitHub 下载存档，其中包含现有处理器的引导加载程序以及内核和文件系统镜像。
 - [u-boot-hi3516cv300-universal.bin](https://github.com/OpenIPC/firmware/releases/download/latest/u-boot-hi3516cv300-universal.bin)
 - [openipc.hi3516cv300-nand-ultimate.tgz](https://github.com/OpenIPC/firmware/releases/download/latest/openipc.hi3516cv300-nand-ultimate.tgz)
 
-我们将引导加载程序按原样放入 tftp 服务器文件夹中，并且必须首先解压内核和文件系统映像。  要安装固件，您需要通过 UART 连接，相应地，这将需要 USB-TTL 适配器、连接器和终端程序。
+我们将引导加载程序按原样放入 tftp 服务器文件夹中，并且必须首先解压内核和文件系统镜像。  要安装固件，您需要通过 UART 连接，相应地，这将需要 USB-TTL 适配器、连接器和终端程序。
 
 ### 联系
 
@@ -59,7 +59,7 @@ setenv ethaddr 00:12:34:56:78:90    //MAC-адрес с наклейки кам�
 
 saveenv
 ```
-### 内核和文件系统映像 
+### 内核和文件系统镜像 
 由于种族正确的引导加载程序，固件并不容易，但非常简单：
 ```
 run uknand

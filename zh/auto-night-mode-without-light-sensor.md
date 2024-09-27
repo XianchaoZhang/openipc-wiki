@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 没有光传感器的设备上自动夜间模式 
 ================================

@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 内核配置的额外要求 
 ------------------------------------------------

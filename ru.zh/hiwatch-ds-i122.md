@@ -25,11 +25,11 @@ Rostelecom HiWatch DS-I122
 
 ![](https://mixatronik.ru/wp-content/uploads/2023/05/2023-05-03_17-21-19.png)
 
-从链接[下载 OpenIPC 固件（精简版）映像](https://openipc.org/cameras/vendors/hisilicon/socs/hi3518cv100/download_full_image?flash_size=16&flash_type=nor&fw_release=lite)下载转储。这是引导加载程序、内核和文件系统的完整转储。只需刷新它，在引导加载程序中执行几个命令，系统就可以运行了。
+从链接[下载 OpenIPC 固件（精简版）镜像](https://openipc.org/cameras/vendors/hisilicon/socs/hi3518cv100/download_full_image?flash_size=16&flash_type=nor&fw_release=lite)下载转储。这是引导加载程序、内核和文件系统的完整转储。只需烧录它，在引导加载程序中执行几个命令，系统就可以运行了。
 
-## 正确的引导加载程序 如果向下滚动上一页，将会出现另外两个链接 - 分别指向引导加载程序和 Linux。您需要刷新引导加载程序并从中刷新 Linux，但本机 Hick 引导加载程序中没有用于此目的的工具。让我们将 OpenIPC 引导加载程序加载到 RAM 中，将控制权转移给它，并从中刷新完整映像。
+## 正确的引导加载程序 如果向下滚动上一页，将会出现另外两个链接 - 分别指向引导加载程序和 Linux。您需要烧录引导加载程序并从中烧录 Linux，但本机 Hick 引导加载程序中没有用于此目的的工具。让我们将 OpenIPC 引导加载程序加载到 RAM 中，将控制权转移给它，并从中烧录完整镜像。
 
-**超级终端**程序可以使用**Kermit**协议通过**UART**传输数据。为此，您需要在控制台中运行**loadb**命令，并从程序菜单中选择**传输->发送文件**。在出现的窗口中，选择引导加载程序映像文件**OpenIPC**、协议**Kermit**，然后按**发送**按钮 - 我们将看到一个数据传输进度窗口。传输完成后，图像将位于RAM中的**0x81000000**地址。
+**超级终端**程序可以使用**Kermit**协议通过**UART**传输数据。为此，您需要在控制台中运行**loadb**命令，并从程序菜单中选择**传输->发送文件**。在出现的窗口中，选择引导加载程序镜像文件**OpenIPC**、协议**Kermit**，然后按**发送**按钮 - 我们将看到一个数据传输进度窗口。传输完成后，图像将位于RAM中的**0x81000000**地址。
 
 我们发出命令 **go 0x81000000** 将控制权转移给新的引导加载程序，并准备好按键以停止启动。如果一切按预期进行，我们就进入了 **OpenIPC** 引导加载程序，但问题是其中没有网络。要使其出现，您需要执行命令 **setenv phyaddru 3** 和 **setenv phyaddrd 1** 来初始化界面。
 

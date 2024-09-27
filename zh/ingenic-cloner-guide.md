@@ -1,6 +1,6 @@
 ### Ingenic 克隆工具
 
-ingenic cloner 应用程序是一款 PC 端实用程序，可与 Ingenic SOC 内置的"USB 启动"模式交互。通过将 SOC 置于"USB 启动"模式，您可以使用 ingenic clonger 应用程序直接刷新固件芯片，而无需物理移除或连接闪存芯片。
+ingenic cloner 应用程序是一款 PC 端实用程序，可与 Ingenic SOC 内置的"USB 启动"模式交互。通过将 SOC 置于"USB 启动"模式，您可以使用 ingenic clonger 应用程序直接烧录固件芯片，而无需物理移除或连接闪存芯片。
 
 本指南尚在编写中。
 
@@ -55,7 +55,7 @@ SOIC8 芯片的引脚 5 和 6 位于引脚 1 的对角，由旁边的浮雕或�
      - 8MB 闪存芯片设备使用"txxx_sfc_nor_reader_8MB.cfg"。
      - 16MB 闪存芯片设备使用"txxx_sfc_nor_reader_16MB.cfg"。
      - 写入单个分区使用"txxx_sfc_nor_writer.cfg"。
-     - 刷新整个芯片使用"txxx_sfc_nor_writer_full.cfg"。
+     - 烧录整个芯片使用"txxx_sfc_nor_writer_full.cfg"。
    - 单击"保存"返回主屏幕。
 
 8. **启动程序**： 

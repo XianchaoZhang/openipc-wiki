@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Contents](../README.zh.md)
+[目录s](../README.zh.md)
 
 Hardware: SoC Manufacturers
 ---------------------------

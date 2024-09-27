@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 FPV 常见问题解答 
 ----------------------------------

@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 ## 从购买到飞行的步骤（适合初学者）
 -----------------------------------

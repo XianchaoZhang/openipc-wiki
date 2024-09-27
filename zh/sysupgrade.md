@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 升级固件 
 ------------------
@@ -108,7 +108,7 @@ fatload mmc 0:1 ${baseaddr} rootfs.squashfs.${soc}
 sf probe 0; sf erase 0x350000 0xa00000; sf write ${baseaddr} 0x350000 ${filesize}
 ```
 
-### 通过 ymodem 刷新 U-Boot
+### 通过 ymodem 烧录 U-Boot
 
 清理 320K RAM 并将引导加载程序文件加载到其中：
 

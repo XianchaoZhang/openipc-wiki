@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 基于 XM530 的设备的 Wi-Fi 
 -----------------------------

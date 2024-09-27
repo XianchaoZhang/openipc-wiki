@@ -1,4 +1,4 @@
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 将 OpenIPC 集成到 HomeKit 中 
 ---

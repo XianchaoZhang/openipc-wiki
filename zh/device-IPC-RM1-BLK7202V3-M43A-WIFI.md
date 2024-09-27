@@ -148,8 +148,8 @@ curl -v -u user:pass -H "Content-Type: application/json" -X POST --data-binary @
 ```
 
 
-# 刷新 
-库存固件被密码锁定，并且 LAN 接口不存在，所以我猜可以使用以下方法来刷新此板：
+# 烧录 
+库存固件被密码锁定，并且 LAN 接口不存在，所以我猜可以使用以下方法来烧录此板：
 - [烧录](https://github.com/OpenIPC/burn) + [u-boot-gk7202v300-universal.bin](https://github.com/OpenIPC/firmware/releases/download/latest/u-boot-gk7202v300-universal.bin) 然后通过 X/Y/ZMODEM 上传固件（例如 **loady**。提示：使用 **baud** 选项加速）或从 SD 卡上传固件（需要电源，[见上文](#SD-Card))
 - 通过库存 Web 界面加载完整图像（未经测试）
 - 闪存编程器

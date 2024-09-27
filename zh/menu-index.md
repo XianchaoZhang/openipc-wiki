@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 ## 基本信息
 
@@ -64,17 +64,17 @@ OpenIPC 是一个基于 Buildroot/OpenWrt 项目的 Linux 操作系统，针对�
 
 | Name                                                             | Role                                                   | Participation                                                            |
 |------------------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------------|
-| [Dmitry Ilyin](https://web.telegram.org/#/im?p=@widgetii)        | co-founder and main participant of the OpenIPC project | [ipctool][ipctool], [majestic][majestic], [mini][mini], [motors][motors] |
-| [Dmitry Ermakov](https://web.telegram.org/#/im?p=@dimerrr)       | main participant                                       | [coupler][coupler], [firmware][firmware], [ipctool][ipctool]             |
-| [Igor Zalatov](https://web.telegram.org/#/im?p=@FlyRouter)       | **project founder and development coordinator**        | [chaos_calmer][chaos_calmer], [firmware][firmware], [wiki][wiki]         |
+| [Dmitry Ilyin](https://web.telegram.org/#/im?p=@widgetii)        | OpenIPC 项目联合创始人及主要参与者	 | [ipctool][ipctool], [majestic][majestic], [mini][mini], [motors][motors] |
+| [Dmitry Ermakov](https://web.telegram.org/#/im?p=@dimerrr)       | 主要参与者                                      | [coupler][coupler], [firmware][firmware], [ipctool][ipctool]             |
+| [Igor Zalatov](https://web.telegram.org/#/im?p=@FlyRouter)       | **项目创始人和开发协调员**        | [chaos_calmer][chaos_calmer], [firmware][firmware], [wiki][wiki]         |
 | [Ivan Pozdeev](https://web.telegram.org/#/im?p=@John)            | developer                                              | [microbe-web][webui], [yaml-cli][yaml-cli]                               |
 | [Konstantin](#)                                                  | developer                                              | [hisi-trace][hisi-trace], [yaml-cli][yaml-cli]                           |
 | [Maksim Patrushev](https://web.telegram.org/#/im?p=@maxi380)     | developer                                              | [motors][motors]                                                         |
-| [Maxim Chertov](https://web.telegram.org/#/im?p=@mAX3773)        | co-founder of the OpenIPC project                      | [chaos_calmer][chaos_calmer], [ipctool][ipctool], [mini][mini]           |
-| [Paul Philippov](https://web.telegram.org/#/im?p=@themactep)     | main participant                                       | [microbe-web][webui]                                                     |
-| [Sergey Sharshunov](https://web.telegram.org/#/im?p=@USSSSSH)    | co-founder of the OpenIPC project                      | [chaos_calmer][chaos_calmer], [burn][burn]                               |
-| [Temirkhan Myrzamadi](https://web.telegram.org/#/im?p=@hirrolot) | main participant                                       | [smolrtsp][smolrtsp]                                                     |
-| [Vasiliy Yakovlev](https://web.telegram.org/#/im?p=@#)           | general facilitator                                    |                                                                          |
+| [Maxim Chertov](https://web.telegram.org/#/im?p=@mAX3773)        | OpenIPC 项目联合创始人                      | [chaos_calmer][chaos_calmer], [ipctool][ipctool], [mini][mini]           |
+| [Paul Philippov](https://web.telegram.org/#/im?p=@themactep)     | 主要参与者                                       | [microbe-web][webui]                                                     |
+| [Sergey Sharshunov](https://web.telegram.org/#/im?p=@USSSSSH)    | OpenIPC 项目联合创始人                      | [chaos_calmer][chaos_calmer], [burn][burn]                               |
+| [Temirkhan Myrzamadi](https://web.telegram.org/#/im?p=@hirrolot) | 主要参与者                                       | [smolrtsp][smolrtsp]                                                     |
+| [Vasiliy Yakovlev](https://web.telegram.org/#/im?p=@#)           | 总协调员                                    |                                                                          |
 
 
 OpenIPC 提供两个级别的支持。

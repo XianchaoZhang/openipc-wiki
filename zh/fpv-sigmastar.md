@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 
 在 SigmaStar 设备上安装 OpenIPC 固件的说明 
@@ -15,7 +15,7 @@
 #### 关于实验的简短说明，将会修订和更新
 
 #### 摘要 
-Sigmastar IPL（预引导加载程序）允许从 SD 卡启动自定义 U-Boot。使用此临时 OpenIPC 固件，您可以创建 nand 的备份，然后刷新永久固件。
+Sigmastar IPL（预引导加载程序）允许从 SD 卡启动自定义 U-Boot。使用此临时 OpenIPC 固件，您可以创建 nand 的备份，然后烧录永久固件。
 
 #### 准备
 - 将 SD 卡连接到计算机，创建一个 1 GB 分区并将其格式化为 FAT32 / VFAT。

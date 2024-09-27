@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 仅适用于带有 XM530/XM550 SoC 的 XM 供应商主板!!! 
 --------------------------------------------------
@@ -35,7 +35,7 @@ run uk; run ur; reset
 
 ### 注释
 
-完成新固件刷新后，请运行"firstboot"命令来格式化用于存储设置的 jffs2 分区。
+完成新固件烧录后，请运行"firstboot"命令来格式化用于存储设置的 jffs2 分区。
 
 ### 已知问题
 

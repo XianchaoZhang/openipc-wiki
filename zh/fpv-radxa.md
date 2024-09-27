@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 OpenIPC FPV 地面站 
 --------------------------
@@ -22,7 +22,7 @@ OpenIPC FPV 地面站
 
 ### Wifi
 
-您可以[设置板载 wifi](https://github.com/OpenIPC/sbc-groundstations/blob/master/radxa_pi_zero_3w/headless_setup.md#setup-of-autoconnect-on-boot) 以进行 SSH 连接。（udev 规则和网络管理器已在此映像中配置，您只需执行 nmcli 命令）
+您可以[设置板载 wifi](https://github.com/OpenIPC/sbc-groundstations/blob/master/radxa_pi_zero_3w/headless_setup.md#setup-of-autoconnect-on-boot) 以进行 SSH 连接。（udev 规则和网络管理器已在此镜像中配置，您只需执行 nmcli 命令）
 
 注意：对于 RubyFPV，你要么需要一个 USB 网络适配器（如下所示）
 

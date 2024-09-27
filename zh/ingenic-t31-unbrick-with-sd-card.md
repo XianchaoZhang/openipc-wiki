@@ -1,4 +1,4 @@
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 使用 SD 卡解开 Ingenic T31 
 ---
@@ -104,7 +104,7 @@ T30A | `make isvp_t30a_msc0_ddr128M`
 dd if=./openipc-t31x-ultimate-16mb.bin of=/dev/[sd-card-device] seek=20480
 ```
 
-当卡块大小为 512 字节时，这将把 OpenIPC 映像刻录到 SD 卡的 10MB 偏移处
+当卡块大小为 512 字节时，这将把 OpenIPC 镜像刻录到 SD 卡的 10MB 偏移处
 
 在 uboot 中运行
 
@@ -120,7 +120,7 @@ sf write 0x80600000 0x0 0x1000000
 
 如果 uboot 中有"fatload"命令，则用于直接从 FAT 文件系统加载文件
 
-将 SD 卡的 FAT 文件系统挂载到 PC 上，将 OpenIPC 固件映像复制到其中。在 uboot 中，运行"fatls mmc 0"列出 SD 卡中的文件，然后
+将 SD 卡的 FAT 文件系统挂载到 PC 上，将 OpenIPC 固件镜像复制到其中。在 uboot 中，运行"fatls mmc 0"列出 SD 卡中的文件，然后
 
 ```
 mw.b 0x80600000 0xff 0x1000000

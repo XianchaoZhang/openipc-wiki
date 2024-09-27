@@ -183,9 +183,9 @@ make br-<package>-rebuild
 ```
 一旦你开始修改软件包，你就会意识到你需要一种方法来只重建一个特定的软件包，而不需要重建整个项目。这可能吗？幸运的是，是的。在对软件包配置进行更改后，你所要做的就是运行几个命令：其中 _\<package>_ 是要重新编译的软件包的名称。尽管正如 Buildroot 手册所述，
 
-> 虽然 `br-<package>-rebuild` 意味着 `br-<package>-reinstall`，而 `br-<package>-reconfigure` 意味着 `br-<package>-rebuild`，但这些目标以及 `<package>` 仅对所述包起作用，并且不会触发重新创建根文件系统映像。如果需要重新创建根文件系统，还应运行 `make br-all`。
+> 虽然 `br-<package>-rebuild` 意味着 `br-<package>-reinstall`，而 `br-<package>-reconfigure` 意味着 `br-<package>-rebuild`，但这些目标以及 `<package>` 仅对所述包起作用，并且不会触发重新创建根文件系统镜像。如果需要重新创建根文件系统，还应运行 `make br-all`。
 
-运行"make br-linux-rebuild br-all"重建 Linux 内核映像，运行"make br-busybox-rebuild br-all"重建 busybox 并将其打包成 rootfs 映像。
+运行"make br-linux-rebuild br-all"重建 Linux 内核镜像，运行"make br-busybox-rebuild br-all"重建 busybox 并将其打包成 rootfs 镜像。
 
 记住！上面两个命令中的包名是你的包的文件夹名，而不是你在Config.in文件中设置的包名
 
@@ -208,7 +208,7 @@ make br-<package>-rebuild
 
 要自定义固件、添加或删除软件包，请运行"make br-menuconfig"。这将加载 buildroot 配置菜单，您可以按照 [Buildroot 用户手册][5] 进行更改。进行更改并在退出时保存修改后的配置。然后运行"make clean all"。
 
-__请注意，直接使用 buildroot 构建固件不会重命名生成的映像文件并为其添加 soc 后缀。您可以自行操作，也可以调整固件并相应地更新命令。__
+__请注意，直接使用 buildroot 构建固件不会重命名生成的镜像文件并为其添加 soc 后缀。您可以自行操作，也可以调整固件并相应地更新命令。__
 
 
 [1]: https://buildroot.org/

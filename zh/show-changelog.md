@@ -1,20 +1,20 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 路线图 
 -------
 
 ### 快速访问热门存储库的 Git 日志：
 
-- [固件](https://github.com/OpenIPC/firmware/commits/master)、[生成器](https://github.com/OpenIPC/builder/commits/master)、[耦合器](https://github.com/OpenIPC/coupler/commits/main)
+- [firmware](https://github.com/OpenIPC/firmware/commits/master)、[builder](https://github.com/OpenIPC/builder/commits/master)、[coupler](https://github.com/OpenIPC/coupler/commits/main)
 - [ipctool](https://github.com/OpenIPC/ipctool/commits/master)、[webui](https://github.com/OpenIPC/webui/commits/master)、[webui-next](https://github.com/OpenIPC/webui-next/commits/master)、[wiki](https://github.com/OpenIPC/wiki/commits/master)
 
 ### 计划变更：
 
 - 添加 webui-next 作为默认界面。
 - 更好地与 Majestic 和 webui-next 集成。
-- 继续重构固件脚本和包。
-- 扩展构建器支持。
+- 继续重构 firmware 脚本和包。
+- 扩展 builder 支持。
 - 扩展文档支持。
 - 扩展 majestic-plugins 支持。
 - 将 buildroot 更新为即将推出的 2024 版本。

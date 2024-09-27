@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 Introduction
 ------------
@@ -237,7 +237,7 @@ loadaddr-$(CONFIG_TARGET_hi35xx_20dv200) := 0x80008000
 ```
 
 
-刷新新固件 
+烧录新固件 
 ---------------------
 
 **注意力！**

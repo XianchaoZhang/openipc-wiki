@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 智能软件 CIP-37210 
 --------------------
@@ -24,9 +24,9 @@
 - 万用表
 - 运行 GNU/Linux 的计算机
 
-刷新 OpenIPC 相机的首选方法是通过 tftp，但 CIP-37210 没有以太网端口。另一个问题是，原装 u-boot 受密码保护，fatload（读取 FAT 文件系统的权限）不起作用。
+烧录 OpenIPC 相机的首选方法是通过 tftp，但 CIP-37210 没有以太网端口。另一个问题是，原装 u-boot 受密码保护，fatload（读取 FAT 文件系统的权限）不起作用。
 
-因此，我们需要结合两种不同于标准程序的方法来刷新 Smartwares CIP-37210：[刻录实用程序](https://github.com/OpenIPC/burn) 直接启动到由 OpenIPC 项目编译的 u-boot 引导加载程序，以便能够从 microSD 卡进行刷新，当然还有 [从 microSD 卡进行刷新](https://paulphilippov.com/articles/flashing-ip-camera-with-full-openipc-binary-firmware-from-sd-card)。
+因此，我们需要结合两种不同于标准程序的方法来烧录 Smartwares CIP-37210：[刻录实用程序](https://github.com/OpenIPC/burn) 直接启动到由 OpenIPC 项目编译的 u-boot 引导加载程序，以便能够从 microSD 卡进行烧录，当然还有 [从 microSD 卡进行烧录](https://paulphilippov.com/articles/flashing-ip-camera-with-full-openipc-binary-firmware-from-sd-card)。
 
 #### 打开设备
 
@@ -50,7 +50,7 @@
 
 #### 保存库存固件
 
-在刷新 OpenIPC 之前，最好先保存一下原厂固件，以防您不喜欢 OpenIPC 并想回滚或破坏某些东西。由于无法使用 tftp，我们将把闪存的内容保存到 microSD 卡中。由于设备运行 Linux，您现在无需担心格式化 microSD 卡。在连接到 USB 转 TTL 适配器时启动相机并启动屏幕：
+在烧录 OpenIPC 之前，最好先保存一下原厂固件，以防您不喜欢 OpenIPC 并想回滚或破坏某些东西。由于无法使用 tftp，我们将把闪存的内容保存到 microSD 卡中。由于设备运行 Linux，您现在无需担心格式化 microSD 卡。在连接到 USB 转 TTL 适配器时启动相机并启动屏幕：
 
 ```sh
 sudo screen -L /dev/ttyUSB0 115200
@@ -64,9 +64,9 @@ for mtd in $(ls /dev/mtdblock*); do dd if=${mtd} of=/mnt/sd/image/${mtd##/*/}.bi
 ```
 您可能需要对另一个文件夹重复此步骤，并比较二进制文件的 md5 校验和以确保转储成功。使用"C-a"然后按"d"退出屏幕，将 microSD 卡重新插入计算机并备份二进制文件。
 
-#### 刷新 OpenIPC
+#### 烧录 OpenIPC
 
-是时候格式化 microSD 卡了，这样 u-boot 才能加载映像。这些步骤可能因您的 Linux 发行版而异。[已经有一个适用于 Debian Sid 的脚本](https://gist.github.com/themactep/d0b72f4c5d5f246e2551622e95bc9987)，但遗憾的是在我的计算机上不起作用。（不同的 fdisk 版本和不同的设备和分区命名）。这些是我运行的命令：
+是时候格式化 microSD 卡了，这样 u-boot 才能加载镜像。这些步骤可能因您的 Linux 发行版而异。[已经有一个适用于 Debian Sid 的脚本](https://gist.github.com/themactep/d0b72f4c5d5f246e2551622e95bc9987)，但遗憾的是在我的计算机上不起作用。（不同的 fdisk 版本和不同的设备和分区命名）。这些是我运行的命令：
 
 ```sh
 # create the partition table
@@ -170,7 +170,7 @@ openipc-hi3518ev200 login: root
  Please visit https://openipc.org/sponsor/ to learn more. Thank you.
 ```
 
-接下来，需要设置刻录实用程序： 现在我们需要下载正确的 uboot 二进制文件 确保没有进程阻止您的 USB 转 TTL 适配器： 如有必要，请终止该进程： 关闭相机电源，并断开并重新连接 USB 转 TTL 适配器。 现在输入以下命令并打开相机电源： 按任意键停止自动启动，您将看到 OpenIPC u-boot shell！ 首先，我们需要检查我们的 microSD 卡是否可以使用： 预期输出如下： 很好！现在是时候将二进制文件加载到内存中了。这些变量是 OpenIPC u-boot 知道要解析的环境变量，因此您只需复制和粘贴： 这应该会导致以下输出： 现在是时候写下并祈祷了： 预期输出如下所示： 如果这里出现任何问题，请不要关闭设备电源并向提到的 [Telegram 组](https://t.me/openipc) 寻求帮助！否则，输入"reset"并按任意键进入刚刚刷新的 u-boot 以停止自动启动。运行以下命令即可完成：现在移除 SD 卡并重新启动，再次输入"reset"，您将看到如下信息：root 密码为"12345"。第一次登录后，不要忘记使用"passwd"更改密码！
+接下来，需要设置刻录实用程序： 现在我们需要下载正确的 uboot 二进制文件 确保没有进程阻止您的 USB 转 TTL 适配器： 如有必要，请终止该进程： 关闭相机电源，并断开并重新连接 USB 转 TTL 适配器。 现在输入以下命令并打开相机电源： 按任意键停止自动启动，您将看到 OpenIPC u-boot shell！ 首先，我们需要检查我们的 microSD 卡是否可以使用： 预期输出如下： 很好！现在是时候将二进制文件加载到内存中了。这些变量是 OpenIPC u-boot 知道要解析的环境变量，因此您只需复制和粘贴： 这应该会导致以下输出： 现在是时候写下并祈祷了： 预期输出如下所示： 如果这里出现任何问题，请不要关闭设备电源并向提到的 [Telegram 组](https://t.me/openipc) 寻求帮助！否则，输入"reset"并按任意键进入刚刚烧录的 u-boot 以停止自动启动。运行以下命令即可完成：现在移除 SD 卡并重新启动，再次输入"reset"，您将看到如下信息：root 密码为"12345"。第一次登录后，不要忘记使用"passwd"更改密码！
 
 如果您在学习本教程时遇到困难但仍想在 Smartwares CIP-37210 上尝试 OpenIPC，您可以[在 open collective 购买预装了 OpenIPC v2.2 固件的产品](https://opencollective.com/openipc/contribute/wifi-camera-showme-by-openipc-44355)。
 

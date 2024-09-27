@@ -1,10 +1,10 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 使用 Burn 安装 OpenIPC 的注意事项 
 --------------------------------------
 
-### 引导程序刷新 GK7205V210，并锁定引导程序
+### 引导程序烧录 GK7205V210，并锁定引导程序
 
 #### 序言
 

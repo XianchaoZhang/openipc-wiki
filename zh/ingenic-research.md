@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 Ingenic SoC 研究和调试笔记 
 ----------------------------------------

@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 仅适用于带有 SoC GK7202V300、GK7205V200、GK7205V300 的 XM 板!!! 
 -----------------------------------------------------------------

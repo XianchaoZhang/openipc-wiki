@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 支持的设备
 -----------------
@@ -12,7 +12,7 @@
 
 如果您仍有疑问，请拍摄硬件特写的高分辨率照片，然后在我们的一个 Telegram 群组中寻求帮助。
 
-[^1]：注意！这样做，您将对自己的行为负全部责任。打开外壳很可能会使设备保修失效。我们不对相机、您自己、您的房子、您的宠物或其他任何东西造成的任何损坏负责。如果您对硬件不熟悉，这个项目可能不适合您。
+[^1]: 注意！这样做，您将对自己的行为负全部责任。打开外壳很可能会使设备保修失效。我们不对相机、您自己、您的房子、您的宠物或其他任何东西造成的任何损坏负责。如果您对硬件不熟悉，这个项目可能不适合您。
 
 您还可以在特殊的 Builder 项目中查看适配设备的列表 - https://github.com/OpenIPC/builder
 
@@ -101,8 +101,8 @@ _如果您要添加其他受支持的设备，请在[此处][2]进行添加。_
 
 
 [1]: https://openipc.org/supported-hardware
-[2]: https://github.com/OpenIPC/wiki/blob/master/en/guide-supported-devices.md
-[3]: https://github.com/OpenIPC/wiki/blob/master/en/device-chacon-ipcam-ri01.md
+[2]: https://github.com/OpenIPC/wiki/blob/master/zh/guide-supported-devices.md
+[3]: https://github.com/OpenIPC/wiki/blob/master/zh/device-chacon-ipcam-ri01.md
 [4]: https://ipcamtalk.com/threads/smartwares-cip-37210-wifi.64605/
 [5]: http://www.hnamg.cn/h-col-139.html
 [6]: https://github.com/OpenIPC/device-mjsxj03hl

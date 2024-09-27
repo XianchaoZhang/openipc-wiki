@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 仅适用于带有 SSC335 Soc 的 Anjoy/Brovotech/Gospell/Uniview 板!!! 
 ------------------------------------------------------------------
@@ -32,7 +32,7 @@ run uk; run ur; reset
 
 ### Notes
 
-完成新固件刷新后，请运行"firstboot"命令来格式化用于存储设置的"jffs2"分区。
+完成新固件烧录后，请运行"firstboot"命令来格式化用于存储设置的"jffs2"分区。
 
 
 ### 其他信息

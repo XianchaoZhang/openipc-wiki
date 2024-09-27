@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 基于OpenIPC的RunCam WiFiLink 
 --------------------------------

@@ -1,7 +1,7 @@
 # Digitus DN-16048 Optizoom PTZ 
 平移、倾斜、聚焦和缩放（通过命令行 ssh）
 
-## 刷新 OpenIPC：
+## 烧录 OpenIPC：
 
 打开外壳后，发现 SoC 是 **hi3518cv100**、**16MB**，相机传感器是 **mt9p006**。在 PC 上安装 TFTP 服务器并按照安装说明进行操作：https://github.com/OpenIPC/wiki/blob/master/en/installation.md 从此处 https://openipc.org/cameras/vendors/hisilicon/socs/hi3518cv100 下载正确的镜像（16MB，精简版）并将其放入 TFTP 服务器的目录中（如果镜像未打包，则可以跳过 "unpacking" 步骤）。如所述，将 UART 适配器连接到 SoC 板上的引脚并在 PC 上启动终端：
 

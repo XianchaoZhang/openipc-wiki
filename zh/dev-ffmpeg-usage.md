@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 FFMPEG、RTSP 和 SRT 示例 
 -----------------------------

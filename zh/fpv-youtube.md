@@ -50,7 +50,7 @@ YouTube 上的精选 OpenIPC 视频
 ### From CurryKitten
 
 - [OpenIPC 构建第 1 部分：什么是 OpenIPC，我使用什么来构建它？](https://www.youtube.com/watch?v=1CDIukf8AJw)
-- [OpenIPC 构建第 2 部分：刷新固件并使视频流正常工作](https://www.youtube.com/watch?v=libsusKy6zc)
+- [OpenIPC 构建第 2 部分：烧录固件并使视频流正常工作](https://www.youtube.com/watch?v=libsusKy6zc)
 
 
 ### 来自电影 FPV - QD 频道

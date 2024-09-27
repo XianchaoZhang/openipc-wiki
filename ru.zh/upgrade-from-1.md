@@ -22,7 +22,7 @@ fw_setenv bootargs 'console=ttyAMA 0,115200 root=/dev/mtdblock3 init=/init rootf
 fw_setenv soc hi3516ev100
 ```
 
-我们使用"flashcp"命令刷新文件系统，该命令之前是从 GitHub OpenIPC 帐户下载的。就我而言，这是"/dev/mtd3"分区，但在某些较旧的硬件上可能存在差异：
+我们使用"flashcp"命令烧录文件系统，该命令之前是从 GitHub OpenIPC 帐户下载的。就我而言，这是"/dev/mtd3"分区，但在某些较旧的硬件上可能存在差异：
 
 ```
 flashcp -v rootfs.squashfs.hi3516ev100 /dev/mtd3

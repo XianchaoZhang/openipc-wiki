@@ -1,5 +1,5 @@
 # OpenIPC Wiki
-[Table of Content](../README.zh.md)
+[目录](../README.zh.md)
 
 常见问题 
 ---------------------------
@@ -26,9 +26,9 @@
 - 支持实验性的 WebRTC（仅限最近的 Hisi/Goke）
 
 
-### 如何从二进制映像中剥离 U-Boot 映像包装器标头
+### 如何从二进制镜像中剥离 U-Boot 镜像包装器标头
 
-有时，供应商的固件由二进制映像组成，这些映像旨在与 U-Boot 映像加载器一起使用，并以 [U-Boot 映像包装器格式](https://formats.kaitai.io/uimage/) 开头。在将此类映像用作原始二进制文件之前，应先删除标头。以下是删除文件中前 64 个字节的方法：
+有时，供应商的固件由二进制镜像组成，这些镜像旨在与 U-Boot 镜像加载器一起使用，并以 [U-Boot 镜像包装器格式](https://formats.kaitai.io/uimage/) 开头。在将此类镜像用作原始二进制文件之前，应先删除标头。以下是删除文件中前 64 个字节的方法：
 
 ```bash
 dd if=inputfile.img of=outputfile.bin bs=64 skip=1
