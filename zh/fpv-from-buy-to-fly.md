@@ -13,7 +13,7 @@
 ### 步骤 2
 ### 步骤 3
 ### 步骤 4
-- [OpenIPC FPV - 摄像头闪烁 SSC338Q](https://www.youtube.com/watch?v=94QiUDmGFZI)
+- [OpenIPC FPV - 摄像头烧录 SSC338Q](https://www.youtube.com/watch?v=94QiUDmGFZI)
 ### 步骤 5
 - [OpenIPC FPV - NVR 地面站](https://www.youtube.com/watch?v=vSJiUanWA9I)
 - [介绍 OpenIPC VRX 地面站，世界上最便宜的数字远程 FPV 系统](https://www.youtube.com/watch?v=aXJQIoBKjVE)

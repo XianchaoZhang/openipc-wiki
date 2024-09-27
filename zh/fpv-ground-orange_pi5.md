@@ -103,11 +103,11 @@ h264
 gst-launch-1.0 udpsrc port=5600 caps='application/x-rtp, media=(string)video, clock-rate=(int)90000, encoding-name=(string)H264' ! rtph264depay ! h264parse ! mppvideodec ! xvimagesink sync=false
 ```
 
-### GS 已准备就绪###
+###GS 已准备就绪###
 
 ### DVR（数字视频录像机）
 
-创建一个文件**gst_start**，内容如下，并赋予执行**chmod +x gst_start**的权限。
+创建一个文件**gst_start**，内容如下，并赋予执行 **chmod +x gst_start** 的权限。
 
 ```
 #!/bin/bash

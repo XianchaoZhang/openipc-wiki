@@ -44,7 +44,7 @@ YouTube 上的精选 OpenIPC 视频
 - [WFB-NG-OpenIPC 连接不良，延迟高。什么是 MCS？](https://www.youtube.com/watch?v=JEqai5JKZws)
 - [FPV系统和摄像机延迟测量装置](https://www.youtube.com/watch?v=69uGeqPZ3CI)
 - [我正在从中国 IP 摄像机廉价模拟 OpenHD 数字 FPV 制作 FPV 全高清链接](https://www.youtube.com/watch?v=NOW99dwKbzI)
-- [闪光相机 Goke7205v200|v210使用说明](https://www.youtube.com/watch?v=pA6xQ5fcZ6Q)
+- [烧录相机 Goke7205v200|v210使用说明](https://www.youtube.com/watch?v=pA6xQ5fcZ6Q)
 
 
 ### From CurryKitten

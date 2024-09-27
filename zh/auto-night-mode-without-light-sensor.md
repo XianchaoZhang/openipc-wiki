@@ -30,7 +30,7 @@ again_low_target=2000
 pollingInterval=5
 ```
 
-"again_high_target"是启用夜间模式的增益值。同样，"again_low_target"是关闭夜间模式的值。您可以更改这些数字以优化您的特定设置。"pollingInterval"表示脚本检查传感器模拟增益值的频率。较低的值将导致更快的响应，但可能会导致对短暂的闪光等的更"紧张"的切换行为。
+"again_high_target"是启用夜间模式的增益值。同样，"again_low_target"是关闭夜间模式的值。您可以更改这些数字以优化您的特定设置。"pollingInterval"表示脚本检查传感器模拟增益值的频率。较低的值将导致更快的响应，但可能会导致对短暂的烧录等的更"紧张"的切换行为。
 
 **注意：**要重新启动 `autonight.sh` 脚本（例如，如果您更改了设置），请使用 `/etc/init.d/S96autonight restart`。要停止脚本（例如，如果您想在不切换 IR 滤镜的情况下观察模拟增益值），请使用 `/etc/init.d/S96autonight stop`。停止脚本后，您可以在终端中手动运行 `/usr/sbin/autonight.sh` 以获取日志输出。
 

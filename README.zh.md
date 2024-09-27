@@ -76,7 +76,7 @@ OpenIPC 维基
 - [CH341A 编程器电压修复](zh/hardware-programmer-ch341a-voltage-fix.md)
 - [Flash 芯片接口](zh/flash-chip-interfacing.md)
 
-### 发展
+### 开发
 
 - [使用 NFS 启动设备](zh/dev-nfs-boot.md)
 - [FFMPEG 用法](zh/dev-ffmpeg-usage.md)
@@ -126,7 +126,7 @@ OpenIPC 维基
 
 ### 子项目
 
-- [coupler](https://openipc.org/ Coupler)
+- [coupler](https://openipc.org/coupler)
 - [firmware](https://openipc.org/firmware)
 - [ipctool](https://openipc.org/ipctool)
 - [telemetry](https://openipc.org/telemetry)

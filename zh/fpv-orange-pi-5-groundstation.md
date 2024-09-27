@@ -3,7 +3,7 @@
 
 ***
 
-下载 Ubuntu Server ISO 并刷入设备——`https://github.com/Joshua-Riek/ubuntu-rockchip`
+下载 Ubuntu Server ISO 并刷入设备 -- `https://github.com/Joshua-Riek/ubuntu-rockchip`
 
 `sudo apt update`
 
@@ -15,7 +15,7 @@
 
 设置系统本地时区 - 用您的用例替换地区和城市
 
-`ln -sf /usr/share/zoneinfo/<区域>/<城市> /etc/localtime`
+`ln -sf /usr/share/zoneinfo/<region>/<city> /etc/localtime`
 
 设置主机名
 
@@ -76,7 +76,7 @@ rtl8812au 驱动程序安装
 
 重启设备
 
-TODO：或者弄清楚如何在不完全重启的情况下加载驱动程序。尝试"modprobe 88xxau"
+TODO：或者弄清楚如何在不完全重启的情况下加载驱动程序。尝试 "modprobe 88xxau"
 
 
 ***
@@ -107,7 +107,7 @@ WFB-ng 安装
 
 更改频道以匹配 vtx
 
-将区域从"BO"更改为"00"
+将区域从 "BO" 更改为 "00"
 
 
 
