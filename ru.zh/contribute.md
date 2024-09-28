@@ -31,7 +31,7 @@ git format-patch master
 
 使用 GitHub 处理小修复甚至更容易。  注意到错字了吗？你想出了更好的措辞吗？注意到链接损坏了吗？只需单击这个类似铅笔的按钮即可进行更正。
 
-![GutHub 校正](../images/gh- Correction.webp)
+![GutHub Correction](../images/gh-correction.webp)
 
 [gh-signup]: https://github.com/signup
 [gitdoc]: https://git-scm.com/book/ru/v2
