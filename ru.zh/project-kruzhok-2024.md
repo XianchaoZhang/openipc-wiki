@@ -56,12 +56,12 @@ Qtech QVC-IPC-136W & 开关摄像机 HS-303-V3
 
 相机的 IP 地址可以在路由器的设置中找到 
 <h1 align="left"> 
-<a><img src="https://raw.githubusercontent.com/TheDayG0ne/wiki/master/images/project -kruzhok-2024/cam -ip-router.png" alt="在路由器设置中查看摄像机的IP地址" width="800"></a> 
+  <a><img src="https://raw.githubusercontent.com/TheDayG0ne/wiki/master/images/project-kruzhok-2024/cam-ip-router.png" alt="在路由器设置中查看摄像机的IP地址" width="800"></a> 
 </h1>
 
 或者通过网络扫描程序（例如，Advanced IP Scanner） 
 <h1 align="left"> 
-<a><img src="https://raw.githubusercontent.com/TheDayG0ne/wiki/master/images/project- kruzhok-2024/cam-ip-aips.png" alt="通过网络扫描程序查看摄像机的IP地址" width="800"></a> 
+  <a><img src="https://raw.githubusercontent.com/TheDayG0ne/wiki/master/images/project-kruzhok-2024/cam-ip-aips.png" alt="通过网络扫描程序查看摄像机的IP地址" width="800"></a> 
 </h1>
 
 ### 登录相机网络界面
